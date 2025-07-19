@@ -16,7 +16,7 @@ import Navbar from './components/navigation/Navbar'
 function App() {
 
   return (
-    <div className='bg-[#111114] text-[#CCCCCC] h-screen '>
+    <div className='text-[#CCCCCC]'>
       <Navbar/>
       <Hero/>
       <Data/>

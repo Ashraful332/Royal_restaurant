@@ -1,11 +1,19 @@
 @import "tailwindcss";
 
+
+/* global */
+body{
+    background-color: #111114;
+}
+
+
 /* global viable */
 :root{
     --primary:#FB8F2C;
     --margin-primary:60px;
     --margin-sec:80px;
     --margin-high:160px;
+    --white-color: #ffff;
 }
 
 /* -- The tailwind utility -- */
@@ -13,13 +21,16 @@
 @utility flex-center{
     @apply flex flex-col items-center;
 }
+@utility flex-row-center{
+    @apply flex items-center;
+}
 @utility flex-column{
     @apply flex flex-col ;
 }
 
 /* background */
 @utility bg-primary{
-    @apply bg-[#FB8F2C] ;
+    @apply bg-[var(--primary)] ;
 }
 
 /* --margin-- */
@@ -35,6 +46,8 @@
 @utility mb-high{
     @apply mb-[var(--margin-high)] ;
 }
+
+/* font style */
 
 
 
