@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
+/* global viable */
+:root{
+    --primary:#FB8F2C;
+}
 
+/* -- The tailwind utility -- */
 /* flex box */
 @utility flex-center{
     @apply flex flex-col items-center;
