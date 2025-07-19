@@ -4,7 +4,7 @@ import Logo from "../../assets/image/Hero/logo.svg"
 
 const Navbar = () => {
     return (
-        <nav>
+        <nav className="">
             <div>
                 <Link to='/'>Home</Link>
                 <Link to='/'>Menu</Link>
