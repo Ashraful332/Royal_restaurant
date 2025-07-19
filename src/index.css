@@ -3,6 +3,9 @@
 /* global viable */
 :root{
     --primary:#FB8F2C;
+    --margin-primary:60px;
+    --margin-sec:80px;
+    --margin-high:160px;
 }
 
 /* -- The tailwind utility -- */
@@ -18,6 +21,21 @@
 @utility bg-primary{
     @apply bg-[#FB8F2C] ;
 }
+
+/* --margin-- */
+/* margin 1 */
+@utility mb-primary{
+    @apply mb-[var(--margin-primary)] ;
+}
+/* margin 2 */
+@utility mb-sec{
+    @apply mb-[var(--margin-sec)] ;
+}
+/* margin 3 */
+@utility mb-high{
+    @apply mb-[var(--margin-high)] ;
+}
+
 
 
 
