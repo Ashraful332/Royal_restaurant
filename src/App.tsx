@@ -16,7 +16,7 @@ import Navbar from './components/navigation/Navbar'
 function App() {
 
   return (
-    <div className='text-[#CCCCCC]'>
+    <div className='text-[#CCCCCC] max-w-screen overflow-x-hidden mx-[14px] sm:mx-[30px]  '>
       <Navbar/>
       <Hero/>
       <Data/>

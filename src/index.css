@@ -21,6 +21,10 @@ body{
 @utility flex-center{
     @apply flex flex-col items-center;
 }
+/* flex box center start */
+@utility flex-center-start{
+    @apply flex flex-col items-start;
+}
 @utility flex-row-center{
     @apply flex items-center;
 }

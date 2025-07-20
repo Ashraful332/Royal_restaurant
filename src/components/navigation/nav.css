@@ -18,4 +18,9 @@
     left: 0;
 }
 
+/* svg icon */
+.menu-svg-icon{
+    filter: invert(100%) brightness(100%);
+}
+
 /* footer css */
