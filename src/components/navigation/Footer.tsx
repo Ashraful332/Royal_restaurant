@@ -6,7 +6,7 @@ import Play from "../../assets/icon/play.svg"
 
 const Footer = () => {
     return (
-        <footer className="max-w-[1170px] flex justify-between m-auto pt-[var(--margin-primary)] ">
+        <footer className="max-w-[1170px] flex flex-col xl:flex-row items-center xl:items-start gap-12 xl:gap-o justify-between m-auto pt-[var(--margin-primary)] ">
             <div className="flex-center gap-[var(--margin-primary)] ">
                 <div className="flex-row-center gap-2">
                     <img src={Logo} alt="logo" />
@@ -29,30 +29,31 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-row">
-                <div className="flex-center-start">
-                    <h3>Usefull Link</h3>
+            <div className="flex flex-col items-center sm:items-start sm:flex-row justify-between w-[100%] xl:w-[60%] gap-12 sm:gap-0 text-sm xl:text-base ">
+                <div className="flex-center sm:flex-center-start gap-6">
+                    <h3 className="footer-header">Usefull Link</h3>
                     <Link to='/'>Home</Link>
                     <Link to='/'>About Us</Link>
                     <Link to='/'>Services</Link>
                     <Link to='/'>Booking</Link>
                     <Link to='/'>Menu</Link>
                 </div>
-                <div className="flex-center-start">
-                    <h3>Contact Info</h3>
-                    <Link to='/'>Silk St, Barbican, London EC2Y 8DS, UK</Link>
+                <div className="flex-center sm:flex-center-start gap-6">
+                    <h3 className="footer-header">Contact Info</h3>
+                    <Link to='/' className="w-[197px] text-center sm:text-start ">Silk St, Barbican, 
+                     London EC2Y 8DS, UK</Link>
                     <Link to='/'>info@example.com</Link>
                     <Link to='/'>800-123-45-678</Link>
                 </div>
-                <div className="flex-center-start">
-                    <h3>Follow Us</h3>
+                <div className="flex-center sm:flex-center-start gap-6">
+                    <h3 className="footer-header">Follow Us</h3>
                     <Link to='/'>Facebook</Link>
                     <Link to='/'>Instagram</Link>
                     <Link to='/'>Linkedin</Link>
                     <Link to='/'>Twitter</Link>
                 </div>
-                <div className="flex-center-start">
-                    <h3>Legal</h3>
+                <div className="flex-center sm:flex-center-start gap-6">
+                    <h3 className="footer-header">Legal</h3>
                     <Link to='/'>Website by uihut.com</Link>
                     <Link to='/'>©2022. All Rights Reserved</Link>
                 </div>

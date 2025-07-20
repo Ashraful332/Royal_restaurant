@@ -24,3 +24,8 @@
 }
 
 /* footer css */
+.footer-header{
+    font: 800;
+    font-size: 20px;
+    color: white;
+}
