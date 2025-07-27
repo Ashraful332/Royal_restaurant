@@ -16,21 +16,30 @@ import Navbar from './components/navigation/Navbar'
 function App() {
 
   return (
-    <div className='text-[#CCCCCC] max-w-screen overflow-x-hidden mx-[14px] sm:mx-[30px]  '>
-      <Navbar/>
-      <Hero/>
-      <Data/>
-      <Popular_Food/>
-      <Opening_Times/>
-      <Our_Menu/>
-      <Visit/>
-      <BookNow/>
-      <Offers/>
-      <Safe/>
-      <Our_Blog/>
-      <Newsletter/>
-      <Footer/>
-    </div>
+    <>
+      <div className='text-[var(--pTx-color)] max-w-screen overflow-x-hidden px-[14px] sm:px-[30px]  '>
+        <Navbar/>
+        <Hero/>
+      </div>
+
+      <div className='max-w-screen overflow-x-hidden'>
+        <Data/>
+      </div>
+      
+      <div className='text-[var(--pTx-color)] max-w-screen overflow-x-hidden px-[14px] sm:px-[30px]  '>
+        <Popular_Food/>
+        <Opening_Times/>
+        <Our_Menu/>
+        <Visit/>
+        <BookNow/>
+        <Offers/>
+        <Safe/>
+        <Our_Blog/>
+        <Newsletter/>
+        <Footer/>
+      </div>
+    </>
+    
   )
 }
 

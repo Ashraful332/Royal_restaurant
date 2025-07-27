@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+
+/* global */
+body{
+    background-color: #111114;
+}
+
+
+/* global viable */
+:root{
+    --primary:#FB8F2C;
+    --margin-primary:60px;
+    --margin-sec:80px;
+    --margin-high:160px;
+    --white-color: #ffff;
+}
+
+/* -- The tailwind utility -- */
+/* flex box */
+@utility flex-center{
+    @apply flex flex-col items-center;
+}
+/* flex box center start */
+@utility flex-center-start{
+    @apply flex flex-col items-start;
+}
+@utility flex-row-center{
+    @apply flex items-center;
+}
+@utility flex-column{
+    @apply flex flex-col ;
+}
+
+/* background */
+@utility bg-primary{
+    @apply bg-[var(--primary)] ;
+}
+
+/* --margin-- */
+/* margin 1 */
+@utility mb-primary{
+    @apply mb-[var(--margin-primary)] ;
+}/* margin 1.2 */
+@utility mt-primary{
+    @apply mt-[var(--margin-primary)] ;
+}
+/* margin 2 */
+@utility mb-sec{
+    @apply mb-[var(--margin-sec)] ;
+}
+/* margin 3 */
+@utility mb-high{
+    @apply mb-[var(--margin-high)] ;
+}
+
+/* font style */
+
+
+
+

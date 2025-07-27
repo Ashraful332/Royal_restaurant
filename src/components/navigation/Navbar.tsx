@@ -7,7 +7,7 @@ import "./nav.css"
 const Navbar = () => {
     return (
         <nav className="max-w-[1170px] flex-row-center justify-between m-auto font-normal mt-[30px] mb-5 ">
-            <div className="hidden lg:flex-row-center gap-[27px] ">
+            <div className="hidden-nav-show gap-[27px] ">
                 <Link to='/'>Home</Link>
                 <Link to='/'>Menu</Link>
                 <Link to='/'>About us</Link>

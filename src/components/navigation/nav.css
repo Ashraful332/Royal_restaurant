@@ -1,10 +1,12 @@
+@import "tailwindcss";
+
 /* navbar css */
 
 .Table-Reservation{
     color: white;
     position: relative;
    
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .Table-Reservation::before{
@@ -21,6 +23,16 @@
 /* svg icon */
 .menu-svg-icon{
     filter: invert(100%) brightness(100%);
+}
+
+@layer utilities {
+  /* components utilities */
+  /* navbar main */
+  .hidden-nav-show {
+    @apply hidden lg:flex lg:items-center ;
+  }
+
+
 }
 
 /* footer css */

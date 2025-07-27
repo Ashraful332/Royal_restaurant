@@ -3,7 +3,7 @@
 const Our_Menu = () => {
     return (
         <div>
-            
+            Our Menu
         </div>
     );
 };
