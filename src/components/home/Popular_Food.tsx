@@ -6,7 +6,7 @@ import Arrow from "../../assets/image/Popular/arrow.svg";
 const Popular_Food = () => {
     return (
         <div className="flex-center text-white max-w-[1170px] mx-auto ">
-            <h3 className="text-6xl  mb-7">Most popular food</h3>
+            <h3 className="text-6xl font-bold mb-7">Most popular food</h3>
             <p className="w-[35%] text-center mb-[50px] ">
                 A list of most popular Bangladeshi food including mains, drinks, and deserts you must try while in Bangladesh, for an authentic experience. Check now!
             </p>

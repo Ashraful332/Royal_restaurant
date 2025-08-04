@@ -115,4 +115,93 @@
   object-fit: cover;
 }
 
+/* Existing styles (add these to your home.css) */
+
+/* Container for visit images */
+.visit-image-div {
+    width: 370px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.visit-image-div-center{
+      width: 370px;
+    height: 630px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Image styling with hover animation */
+.image-visit {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Hover effect animation */
+.image-visit:hover {
+  transform: scale(1.1);
+}
+
+/* Alternative hover animations you can use */
+
+/* Option 1: Zoom and rotate */
+.hover-zoom-rotate:hover {
+  transform: scale(1.1) rotate(2deg);
+}
+
+/* Option 2: Slide up effect */
+.hover-slide-up:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+/* Option 3: Smooth zoom with brightness */
+.hover-bright-zoom {
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.hover-bright-zoom:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+.visit-image-div {
+    width: 300px;
+    height: 240px;
+}
+}
+
+@media (max-width: 480px) {
+.visit-image-div {
+  width: 280px;
+  height: 220px;
+}
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+.visit-image-div-center {
+  width: 300px;
+  height: auto;
+}
+}
+
+@media (max-width: 480px) {
+.visit-image-div-center {
+    width: 280px;
+    height: auto;
+}
+}
 
