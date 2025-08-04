@@ -4,7 +4,9 @@ import "slick-carousel/slick/slick-theme.css";
 const Slider = () => {
     return (
         <div className="mt-primary">
-            <div></div>
+            <div>
+                
+            </div>
         </div>
     );
 };
