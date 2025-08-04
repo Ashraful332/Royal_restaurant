@@ -35,6 +35,10 @@
   /* popular food */
   .hover-image-popular{
     @apply w-full h-full object-cover scale-100 hover:scale-125 brightness-95 hover:brightness-100 transition-transform duration-[500ms] ease-in-out ;
+  } 
+   /* Our menu food */
+  .hover-image-menu-out{
+    @apply w-full h-full object-cover scale-100 hover:scale-110 transition-transform duration-[500ms] ease-in-out ;
   }
 }
 
@@ -102,6 +106,13 @@
   color: white;
   padding: 20px;
   text-align: center;
+}
+
+/* Visit Our Restaurant */
+.visit-image-div{
+  width: 370px;
+  height: 285px;
+  object-fit: cover;
 }
 
 
