@@ -1,6 +1,6 @@
 
 
-const Safe = () => {
+const Cook = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const Safe = () => {
     );
 };
 
-export default Safe;
+export default Cook;
