@@ -9,7 +9,7 @@ import Our_Blog from './components/home/Our_Blog'
 import Our_Menu from './components/home/Our_Menu'
 import Popular_Food from './components/home/Popular_Food'
 import Cook from './components/home/Safe'
-import Slider from './components/home/Slider'
+import AutoSlider from './components/home/Slider'
 import Visit from './components/home/Visit'
 import Footer from './components/navigation/Footer'
 import Navbar from './components/navigation/Navbar'
@@ -37,7 +37,7 @@ function App() {
       </div>
 
       <div className='max-w-screen overflow-x-hidden'>
-        <Slider/>
+        {/* <AutoSlider/> */}
       </div>
 
       <div className='text-[var(--pTx-color)] max-w-screen overflow-x-hidden px-[14px] sm:px-[30px]  '>

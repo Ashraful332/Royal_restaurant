@@ -205,3 +205,8 @@
 }
 }
 
+/* -- the slider  */
+.slick-dots {
+    display: none !important;
+}
+
