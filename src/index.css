@@ -55,4 +55,7 @@ body {
   .mb-high {
     @apply mb-[var(--margin-high)];
   }
+  .mt-high {
+    @apply mt-[var(--margin-high)];
+  }
 }
