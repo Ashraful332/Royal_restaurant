@@ -2,8 +2,8 @@
 
 const Slider = () => {
     return (
-        <div>
-            
+        <div className="mt-primary">
+            <div></div>
         </div>
     );
 };
