@@ -37,7 +37,7 @@ function App() {
       </div>
 
       <div className='max-w-screen overflow-x-hidden'>
-        {/* <AutoSlider/> */}
+        <AutoSlider/>
       </div>
 
       <div className='text-[var(--pTx-color)] max-w-screen overflow-x-hidden px-[14px] sm:px-[30px]  '>
