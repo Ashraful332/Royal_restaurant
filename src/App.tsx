@@ -48,7 +48,7 @@ function App() {
         <Our_Blog/>
       </div>
 
-      <div className='max-w-screen overflow-x-hidden'>
+      <div className='max-w-screen overflow-x-hidden text-[var(--pTx-color)]'>
         <Newsletter/>
       </div>
 
