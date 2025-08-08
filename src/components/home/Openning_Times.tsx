@@ -3,7 +3,7 @@ const Opening_Times = () => {
         <div className="mt-[var(--margin-high)] mb-high flex-center max-w-[1170px] mx-auto">
             <div className="flex flex-col sm:flex-row mx-auto w-full h-[500px] sm:h-[423px]">
                 {/* Left: Image Background Card */}
-                <div className="w-[97vw] sm:w-1/2 h-full">
+                <div className="w-[100%] sm:w-1/2 h-full">
                     <div className="opening-image-div">
                         <h3 className="text-2xl font-semibold mb-2">Find Us Here</h3>
                         <p>Avenue Marina 34568 NY</p>
@@ -13,9 +13,9 @@ const Opening_Times = () => {
                 </div>
 
                 {/* Right: Red Background Card */}
-                <div className="w-[97vw] sm:w-1/2 h-full bg-[var(--primary)] text-black flex flex-col px-6 py-6">
+                <div className="w-[100%] sm:w-1/2 h-full bg-[var(--primary)] text-black flex flex-col px-6 py-6">
                     <h2 className="text-center text-3xl font-bold mb-6">Opening Times</h2>
-                    <div className="flex flex-grow items-center justify-center gap-10 text-center">
+                    <div className="flex flex-grow items-center justify-center gap-10 text-center text-sm sm:text-lg ">
                         <div className="space-y-2">
                         <p>Mon</p>
                         <p>Wed</p>

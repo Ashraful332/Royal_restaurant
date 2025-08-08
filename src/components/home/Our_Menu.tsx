@@ -4,10 +4,10 @@ const Our_Menu = () => {
     return (
         <div className="flex-center max-w-[1170px] mx-auto mb-high ">
             <p>Our Menu</p>
-            <h3 className="py-5 mt-5 text-6xl mb-5 ">
+            <h3 className="text-header mb-10 mt-3 ">
                 Choose & Taste What You Like
             </h3>
-            <p className="mb-primary w-[52%] text-center ">
+            <p className="mb-primary  w-[80vw] sm:w-[60%] lg:w-[55%] text-center ">
                 A list of top Bangladeshi food including mains, drinks, and deserts you must try while in Bangladesh, for an authentic experience. Check now!
             </p>
             <div className="flex items-center gap-11 text-3xl pb-6">
