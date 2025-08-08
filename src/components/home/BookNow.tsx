@@ -2,8 +2,8 @@
 
 const BookNow = () => {
     return (
-        <div className="flex-center mx-auto mt-high">
-            <div className="flex text-black w-[60vw] mx-auto ">
+        <div className="flex-center max-w-[1170px] mx-auto mt-high">
+            <div className="flex text-black mx-auto ">
                 <div className="flex flex-col bg-primary pl-10 pt-5 w-[50%] ">
                     <h2 className="text-4xl">Reserve ! Book Now</h2>
                     <button className="text-xl">Set Date</button>

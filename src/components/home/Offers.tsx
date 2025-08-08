@@ -2,9 +2,9 @@
 
 const Offers = () => {
     return (
-        <div className="flex-center mt-high mx-auto">
+        <div className="flex-center mt-high mx-auto max-w-[1170px]">
             <h2 className="text-6xl font-bold text-center mb-10">Our Daily Offers</h2>
-            <div className="flex flex-col lg:flex-row gap-8 w-[60vw] ">
+            <div className="flex flex-col lg:flex-row gap-8 ">
                 <div className="w-[50%] relative ">
                     <div>
                         <img src="https://i.ibb.co/s99P8STc/63819251c50a511441758a4f-Rectangle-27.png" alt="offer"

@@ -3,10 +3,10 @@ import "./home.css"
 
 const Our_Blog = () => {
     return (
-        <div className="flex-center mt-high max-w-[1170px] h-auto mx-auto pt-4">
+        <div className="flex-center mt-high max-w-[1170px] h-auto  mx-auto pt-4">
             <p className="text-[14px] ">Our Blog</p>
             <h3 className="text-6xl font-bold mb-primary">Recent Articles</h3>
-            <div className="w-[60vw] flex flex-col lg:flex-row gap-10 mb-sec ">
+            <div className=" flex flex-col lg:flex-row gap-10 mb-sec ">
                 <div className="w-[50%] mx-auto h-[357px] overflow-hidden object-center relative ">
                     <img src="https://i.ibb.co.com/mFGtpR3m/63786d3454cc507817e7bd6c-1.png" alt="food" 
                     className="hover-image-blog"/>
@@ -24,7 +24,7 @@ const Our_Blog = () => {
                     <button className="Read-Now">Read Now</button>
                 </div>
             </div>
-            <div className="w-[60vw] flex flex-col lg:flex-row-reverse gap-10 mb-sec ">
+            <div className="flex flex-col lg:flex-row-reverse gap-10 mb-sec ">
                 <div className="w-[50%] mx-auto h-[357px] overflow-hidden object-center relative ">
                     <img src="https://i.ibb.co.com/84SbdhXT/63819251c50a511441758a4f-Rectangle-27.png" alt="food" 
                     className="hover-image-blog"/>
