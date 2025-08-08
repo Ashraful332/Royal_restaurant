@@ -18,8 +18,11 @@ function App() {
 
   return (
     <>
-      <div className='text-[var(--pTx-color)] max-w-screen overflow-x-hidden px-[14px] sm:px-[30px]  '>
+      <div className='text-primary max-w-screen overflow-x-hidden'>
         <Navbar/>
+      </div>
+        
+      <div className='text-primary max-w-screen overflow-x-hidden px-[14px] sm:px-[30px]  '>
         <Hero/>
       </div>
 
@@ -27,7 +30,7 @@ function App() {
         <Data/>
       </div>
       
-      <div className='text-[var(--pTx-color)] max-w-screen overflow-x-hidden px-[14px] sm:px-[30px]  '>
+      <div className='text-primary max-w-screen overflow-x-hidden px-[14px] sm:px-[30px]  '>
         <Popular_Food/>
         <Opening_Times/>
         <Our_Menu/>
@@ -40,19 +43,19 @@ function App() {
         <AutoSlider/>
       </div>
 
-      <div className='text-[var(--pTx-color)] max-w-screen overflow-x-hidden px-[14px] sm:px-[30px]  '>
+      <div className='text-primary max-w-screen overflow-x-hidden px-[14px] sm:px-[30px]  '>
         <Cook/>
       </div>
 
-      <div className='text-[var(--pTx-color)] max-w-screen overflow-x-hidden px-[14px] sm:px-[30px]  '>
+      <div className='text-primary max-w-screen overflow-x-hidden px-[14px] sm:px-[30px]  '>
         <Our_Blog/>
       </div>
 
-      <div className='max-w-screen overflow-x-hidden text-[var(--pTx-color)]'>
+      <div className='max-w-screen overflow-x-hidden text-primary'>
         <Newsletter/>
       </div>
 
-      <div className='text-[var(--pTx-color)] max-w-screen overflow-x-hidden px-[14px] sm:px-[30px]  '>
+      <div className='text-primary max-w-screen overflow-x-hidden px-[14px] sm:px-[30px]  '>
         <Footer/>
       </div>
     </>

@@ -58,4 +58,7 @@ body {
   .mt-high {
     @apply mt-[var(--margin-high)];
   }
+  .text-primary {
+    @apply text-[var(--pTx-color)];
+  }
 }
