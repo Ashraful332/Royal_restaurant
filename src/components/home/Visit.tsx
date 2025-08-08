@@ -3,8 +3,8 @@ import "./home.css"
 const Visit = () => {
     return (
         <div className="flex-center">
-            <h3 className="text-6xl font-bold mb-4 text-center">Visit Our Restaurant</h3>
-            <p className="mb-9  w-[97vw] sm:w-[70vw] xl:w-[35vw] text-center ">
+            <h3 className="text-header mb-4 ">Visit Our Restaurant</h3>
+            <p className="mb-9  w-[97vw] sm:w-[65vw] xl:w-[35vw] text-center ">
                 Quality country-style menu selection, friendly and efficient service, combined with genuine value has kept Our Best serving families like yours for over 28.
             </p>
             <div className="flex flex-col lg:flex-row items-start gap-7">
