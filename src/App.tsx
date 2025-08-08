@@ -17,7 +17,7 @@ import Navbar from './components/navigation/Navbar'
 function App() {
 
   return (
-    <>
+    <div>
       <div className='text-primary max-w-screen overflow-x-hidden'>
         <Navbar/>
       </div>
@@ -58,7 +58,7 @@ function App() {
       <div className='text-primary max-w-screen overflow-x-hidden px-[14px] sm:px-[30px]  '>
         <Footer/>
       </div>
-    </>
+    </div>
     
   )
 }
