@@ -61,4 +61,7 @@ body {
   .text-primary {
     @apply text-[var(--pTx-color)];
   }
+  .text-header {
+    @apply text-4xl lg:text-6xl font-bold text-center text-white;
+  }
 }
