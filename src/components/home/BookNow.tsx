@@ -3,7 +3,7 @@
 const BookNow = () => {
     return (
         <div className="flex-center max-w-[1170px] mx-auto mt-high">
-            <div className="flex flex-col sm:flex-col text-black mx-auto ">
+            <div className="flex flex-col sm:flex-row text-black mx-auto ">
                 <div className="flex flex-col bg-primary pl-10 pt-5 w-full sm:w-[50%] ">
                     <h2 className="text-2xl lg:text-4xl font-bold ">Reserve ! Book Now</h2>
                     <button className="text-xl">Set Date</button>

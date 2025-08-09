@@ -21,43 +21,43 @@ const Offers = () => {
                     </div>
                 </div>
                 <div className="w-full lg:w-[50%] flex flex-col gap-6 ">
-                    <div className=" flex items-start h-[150px] sm:h-[130px] gap-3 ">
+                    <div className=" flex items-start h-auto sm:h-[130px] gap-3 ">
                         <div>
-                            <img src="https://i.ibb.co/spwh3cQd/63786d3454cc507817e7bd6c-1.png" alt=""  
-                            className=" w-auto sm:w-[130px] h-[120px] object-cover "/>
+                            <img src="https://i.ibb.co/spwh3cQd/63786d3454cc507817e7bd6c-1.png" alt="food"  
+                            className=" w-auto sm:w-[130px] h-auto sm:h-[120px] object-cover "/>
                         </div>
                         <div className="flex flex-col justify-between" >
                             <div className="flex items-center justify-between w-auto sm:w-[60%] ">
                                 <p className=" text-sm sm:text-lg font-bold">cheese burger</p>
                                 <p className=" text-sm sm:text-lg font-bold">$32</p>
                             </div>
-                            <p className="text-[#ffffff9d] w-[60%] mt-4 text-sm sm:text-lg ">mutton, chcken and vegetable fried rolls served with lettuce wraps</p>
+                            <p className="text-[#ffffff9d] w-auto sm:w-[60%] mt-4 text-sm sm:text-lg ">mutton, chcken and vegetable fried rolls served with lettuce wraps</p>
                         </div>
                     </div>
-                    <div className=" flex items-start h-[130px] gap-3 ">
+                    <div className=" flex items-start h-auto sm:h-[130px] gap-3 ">
                         <div>
-                            <img src="https://i.ibb.co/Pv03dxfm/63ba6d059d5ae7789894d6ed-Rectangle-10.png" alt="" 
-                            className="w-[130px] h-[120px] object-cover " />
+                            <img src="https://i.ibb.co/Pv03dxfm/63ba6d059d5ae7789894d6ed-Rectangle-10.png" alt="food" 
+                            className="w-auto sm:w-[130px] h-auto sm:h-[120px] object-cover  " />
                         </div>
                         <div className="flex flex-col justify-between" >
-                            <div className="flex items-center justify-between w-[60%] ">
-                                <p className="text-lg font-bold">Spicy Club</p>
-                                <p className="text-lg font-bold">$42</p>
+                            <div className="flex items-center justify-between w-auto sm:w-[60%] ">
+                                <p className="text-sm sm:text-lg font-bold">Spicy Club</p>
+                                <p className="text-sm sm:text-lg font-bold">$42</p>
                             </div>
-                            <p className="text-[#ffffff9d] w-[60%] mt-4 ">mutton, chcken and vegetable fried rolls served with lettuce wraps</p>
+                            <p className="text-[#ffffff9d] w-auto sm:w-[60%] mt-4  text-sm sm:text-lg ">mutton, chcken and vegetable fried rolls served with lettuce wraps</p>
                         </div>
                     </div>
-                    <div className=" flex items-start h-[130px] gap-3 ">
+                    <div className=" flex items-start h-auto sm:h-[130px] gap-3 ">
                         <div>
-                            <img src="https://i.ibb.co/Hf1h7Ncs/63ba6d50d2f5f52a5dbba9c7-Rectangle-12.png" alt="" 
-                            className="w-[130px] h-[120px] object-cover " />
+                            <img src="https://i.ibb.co/Hf1h7Ncs/63ba6d50d2f5f52a5dbba9c7-Rectangle-12.png" alt="food" 
+                            className="w-auto sm:w-[130px] h-auto sm:h-[120px] object-cover  " />
                         </div>
                         <div className="flex flex-col justify-between" >
-                            <div className="flex items-center justify-between w-[60%] ">
-                                <p className="text-lg font-bold">fruit sandwich</p>
-                                <p className="text-lg font-bold">$12</p>
+                            <div className="flex items-center justify-between w-auto sm:w-[60%] ">
+                                <p className="text-sm sm:text-lg font-bold">fruit sandwich</p>
+                                <p className="text-sm sm:text-lg font-bold">$12</p>
                             </div>
-                            <p className="text-[#ffffff9d] w-[60%] mt-4 ">mutton, chcken and vegetable fried rolls served with lettuce wraps</p>
+                            <p className="text-[#ffffff9d] w-auto sm:w-[60%] mt-4 text-sm sm:text-lg ">mutton, chcken and vegetable fried rolls served with lettuce wraps</p>
                         </div>
                     </div>
                 </div>

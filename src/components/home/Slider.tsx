@@ -24,28 +24,28 @@ const AutoSlider = () => {
         <div className="mt-primary">
             <div className="smooth-slider-wrapper">
                 <Slider {...settings}>
-                    <div className="bg-primary py-4 flex flex-col items-center">
+                    <div className="bg-primary py-10 sm:py-4 flex flex-col items-center">
                         <img src="https://i.ibb.co/60MHFz5K/Group.png" alt="logo" />
                         <p>Best Food</p>
                     </div>
-                    <div className="bg-primary py-4 flex flex-col items-center">
+                    <div className="bg-primary py-10 sm:py-4 flex flex-col items-center">
                         <img src="https://i.ibb.co/60MHFz5K/Group.png" alt="logo" />
                         <p>Fast Delivery</p>
                     </div>
-                    <div className="bg-primary py-4 flex flex-col items-center">
+                    <div className="bg-primary py-10 sm:py-4 flex flex-col items-center">
                         <img src="https://i.ibb.co/60MHFz5K/Group.png" alt="logo" />
                         <p>Free Test</p>
                     </div>
-                    <div className="bg-primary py-4 flex flex-col items-center">
+                    <div className="bg-primary py-10 sm:py-4 flex flex-col items-center">
                         <img src="https://i.ibb.co/60MHFz5K/Group.png" alt="logo" />
                         <p>Best Service</p>
                     </div>
                     {/* Duplicate slides for better loop */}
-                    <div className="bg-primary py-4 flex flex-col items-center">
+                    <div className="bg-primary py-10 sm:py-4 flex flex-col items-center">
                         <img src="https://i.ibb.co/60MHFz5K/Group.png" alt="logo" />
                         <p>Best Food</p>
                     </div>
-                    <div className="bg-primary py-4 flex flex-col items-center">
+                    <div className="bg-primary py-10 sm:py-4 flex flex-col items-center">
                         <img src="https://i.ibb.co/60MHFz5K/Group.png" alt="logo" />
                         <p>Fast Delivery</p>
                     </div>

@@ -5,7 +5,7 @@ const Our_Blog = () => {
     return (
         <div className="flex-center mt-high max-w-[1170px] h-auto  mx-auto pt-4">
             <p className="text-[14px] ">Our Blog</p>
-            <h3 className="text-6xl font-bold mb-primary">Recent Articles</h3>
+            <h3 className="text-header mb-primary">Recent Articles</h3>
             <div className=" flex flex-col lg:flex-row gap-10 mb-sec ">
                 <div className="w-[50%] mx-auto h-[357px] overflow-hidden object-center relative ">
                     <img src="https://i.ibb.co.com/mFGtpR3m/63786d3454cc507817e7bd6c-1.png" alt="food" 

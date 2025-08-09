@@ -3,11 +3,11 @@
 const Cook = () => {
     return (
         <div className="mt-primary flex-center max-w-[1170px] mx-auto ">
-            <h2 className="text-6xl font-bold text-center mb-9">They will cook for you</h2>
-            <p className="text-center mb-9  w-[97vw] sm:w-[70vw] xl:w-[35vw]">
+            <h2 className="text-header mb-9">They will cook for you</h2>
+            <p className="text-center mb-9 w-[97vw] sm:w-[70vw] xl:w-[35vw]">
                 Our Diners can enjoy cooking for themselves, or visiting a curated selection of restaurants in the area. They will cook for you and make sure you have a home away from home at all times.
             </p>
-            <div className="flex flex-row w-[60%] justify-between ">
+            <div className="flex flex-col md:flex-row justify-between gap-3 ">
                 <div className="flex flex-col items-center gap-1">
                     <img src="https://i.ibb.co.com/svgd09w6/6371cfd801967374d6cfa502-Rectangle-82.png" alt="cook" />
                     <h3 className="mt-2 font-semibold text-2xl">Jubed Ahmed</h3>
