@@ -3,10 +3,10 @@
 const Newsletter = () => {
     return (
         <div className="mt-high mb-sec data-main  ">
-            <div className="flex flex-row items-center justify-center w-[60vw] max-w-[1170px] gap-[60%] mx-auto">
-                <div className="w-[22vw] ">
-                    <h2 className="text-white font-bold text-3xl">Newsletter</h2>
-                    <p>Subscribe to our newsletter and receive 15% discount from your order.</p>
+            <div className="flex flex-col sm:flex-row items-center justify-center w-[90vw] xl:w-[60vw] max-w-[1170px] sm:gap-[30%] lg:gap-[60%] mx-auto">
+                <div className="flex flex-col text-center sm:text-start gap-2" >
+                    <h2 className="text-white font-bold text-xl sm:text-3xl">Newsletter</h2>
+                    <p className="text-sm ">Subscribe to our newsletter and receive 15% discount from your order.</p>
                 </div>
                 <div className="form-control pr-4 ">
                     <input type="text" required />
