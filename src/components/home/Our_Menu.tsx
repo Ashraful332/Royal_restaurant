@@ -82,7 +82,7 @@ const MenuColumn = ({ items }) => (
             <p className="mb-primary  w-[80vw] sm:w-[60%] lg:w-[55%] text-center ">
                 A list of top Bangladeshi food including mains, drinks, and deserts you must try while in Bangladesh, for an authentic experience. Check now!
             </p>
-            <div className="flex items-center gap-11 text-3xl pb-6 overflow-x-scroll w-[100vw] sm:w-auto mx-auto ">
+            <div className="flex items-center gap-11 text-3xl pb-6 overflow-x-scroll sm:overflow-auto w-[100vw] sm:w-auto mx-auto ">
                 <p>All</p>
                 <p>Appetizer</p>
                 <p>Soup</p>
