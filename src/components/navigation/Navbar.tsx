@@ -16,10 +16,10 @@ const Navbar = () => {
         <nav className="max-w-[1170px] flex-row-center justify-between m-auto font-normal mt-[30px] mb-5 relative px-[14px] sm:px-[30px]">
             <div className="hidden-nav-show gap-[27px]">
                 <Link to='/'>Home</Link>
-                <Link to='/'>Menu</Link>
-                <Link to='/'>About us</Link>
-                <Link to='/'>Blog</Link>
-                <Link to='/'>Contact</Link>
+                <Link to='/menu'>Menu</Link>
+                <Link to='/about'>About us</Link>
+                <Link to='/blog'>Blog</Link>
+                <Link to='/contact'>Contact</Link>
             </div>
             
             <button 
@@ -79,28 +79,28 @@ const Navbar = () => {
                         Home
                     </Link>
                     <Link 
-                        to='/' 
+                        to='/menu' 
                         className="px-6 py-4 text-primary   border-gray-100"
                         onClick={handleLinkClick}
                     >
                         Menu
                     </Link>
                     <Link 
-                        to='/' 
+                        to='/about' 
                         className="px-6 py-4 text-primary   border-gray-100"
                         onClick={handleLinkClick}
                     >
                         About us
                     </Link>
                     <Link 
-                        to='/' 
+                        to='/blog' 
                         className="px-6 py-4 text-primary   border-gray-100"
                         onClick={handleLinkClick}
                     >
                         Blog
                     </Link>
                     <Link 
-                        to='/' 
+                        to='/contact' 
                         className="px-6 py-4 text-primary "
                         onClick={handleLinkClick}
                     >
@@ -114,7 +114,7 @@ const Navbar = () => {
                         11:24 we're open
                     </div>
                     <Link 
-                        to='/' 
+                        to='/reservation' 
                         className="block w-full py-3 px-4 bg-blue-600 text-white text-center rounded-lg hover:bg-blue-700 transition-colors"
                         onClick={handleLinkClick}
                     >
