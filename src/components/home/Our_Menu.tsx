@@ -49,9 +49,19 @@ const menuData = {
   ]
 };
 
-const MenuColumn = ({ items }) => (
+type MenuItem = {
+  name: string;
+  price: string;
+  image: string;
+};
+
+type MenuColumnProps = {
+  items: MenuItem[];
+};
+
+const MenuColumn = ({ items }: MenuColumnProps) => (
   <div className="flex-1 space-y-4">
-    {items.map((item, index) => (
+    {items.map((item: MenuItem, index: number) => (
       <div key={index}>
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div className="w-[100px] h-[100px] flex-shrink-0 overflow-hidden object-cover relative">
