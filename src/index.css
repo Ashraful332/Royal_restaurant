@@ -58,6 +58,9 @@ body {
   .mt-high {
     @apply mt-[var(--margin-high)];
   }
+  .mt-sec {
+    @apply mt-[var(--margin-sec)] ;
+  }
   .text-primary {
     @apply text-[var(--pTx-color)];
   }
