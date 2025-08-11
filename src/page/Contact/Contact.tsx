@@ -4,7 +4,7 @@ import Navbar from "../../components/navigation/Navbar";
 
 const Contact = () => {
     return (
-        <div>
+        <div className="text-primary max-w-screen overflow-x-hidden px-[14px] sm:px-[30px]">
             <Navbar/>
             <div>
                 <div>
