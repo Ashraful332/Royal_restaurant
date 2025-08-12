@@ -17,11 +17,11 @@ const Blog = () => {
                         <div>
                             <img src="https://i.ibb.co.com/CsJCQp8h/63baf8d9f11099476361b130-Rectangle-600.png" alt="" />
                         </div>
-                        <div className="w-[40%] flex flex-col gap-5 ">
+                        <div className="w-[40%] flex flex-col items-start gap-5 ">
                             <h3 className="text-hed-introB ">Everything you need to know about the growing role of AI in restaurants</h3>
                             <p>August 6, 2022 . By Admin</p>
                             <p>You are sitting in your favorite restaurant and have ordered on a tablet on your table. A few seconds after placing the order, a notification will appear in your messaging app.</p>
-                            <button>Read Now</button>
+                            <button className="blog-button-now mt-sec">Read Now</button>
                         </div>
                     </div>
                 </div>
