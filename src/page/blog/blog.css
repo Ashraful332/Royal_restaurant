@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Flexbox */
+  .text-header-blog {
+    @apply  text-2xl lg:text-4xl font-bold text-center text-white  ;
+  }
+  .text-hed-introB {
+    @apply text-xl lg:text-3xl font-bold text-white
+  }
+
+}
+
+
