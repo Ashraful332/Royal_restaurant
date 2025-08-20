@@ -1,10 +1,5 @@
 @import "tailwindcss";
 
-/* global */
-body {
-  /* background-color: #111114; */
-  background-color: #111114;
-}
 
 /* global variables */
 :root {
@@ -14,6 +9,13 @@ body {
   --margin-high: 160px;
   --white-color: #ffff;
   --pTx-color: #CCCCCC;
+}
+
+/* global */
+body {
+  /* background-color: #111114; */
+  background-color: #111114;
+  color: var(--pTx-color) ;
 }
 
 /* ✅ Correct Tailwind custom utility definition */
