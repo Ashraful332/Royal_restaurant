@@ -13,3 +13,24 @@
     background-size: cover;
     background-position: center;
 }
+
+
+/* reservation page */
+.Online-Reservation{
+    background-image: url("https://i.ibb.co.com/1YW2M1p8/italian-cuisine-6903773-1920.jpg");
+    filter: brightness(50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 620px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;   
+}
+
+
+

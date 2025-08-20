@@ -38,7 +38,7 @@ const Navbar = () => {
                 <p className="hidden sm:flex">
                     11:24 we're open
                 </p>
-                <Link to='/' className="Table-Reservation text-sm sm:text-[16px]">
+                <Link to='/reservation' className="Table-Reservation text-sm sm:text-[16px]">
                     Table Reservation
                 </Link>
             </div>
