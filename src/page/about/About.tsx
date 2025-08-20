@@ -30,7 +30,7 @@ const About = () => {
                         </p>
                     </div>
                 </div>
-                <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between w-[100%] ">
+                <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between w-[100%] mb-sec ">
                     <div>
                         <div className="flex flex-row gap-5 mb-10 w-[90vw] sm:w-[70%] ">
                             <img src={barger} alt="icon" />
@@ -60,7 +60,40 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <div></div>
+                <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center  gap-5 lg:gap-0 lg:justify-between w-[100%] ">
+                    <div>
+                        <img src="https://i.ibb.co.com/JRBbNvTd/637b219c75082dada789af56-Rectangle-21.png" alt="photo" />
+                    </div>
+                    <div className="w-full sm:w-[70%] lg:w-[50%] flex flex-col justify-between ">
+                        <div>
+                            <h3 className="text-xl lg:text-4xl font-bold text-white mb-5 ">Subscribe Newsletter & get letest news</h3>
+                            <p>
+                                Piorem ipsum dolor sit amet consectetur adipiscing eliturabitur venenatis, nisl in bib endum commodo, sapien justo cursus are urna, quis porta mauris elit finibus nulla.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <div className="form-control pr-4 ">
+                                <input type="text" required />
+                                <label>
+                                    <span style={{ transitionDelay: '0ms' }}>E</span>
+                                    <span style={{ transitionDelay: '50ms' }}>m</span>
+                                    <span style={{ transitionDelay: '100ms' }}>a</span>
+                                    <span style={{ transitionDelay: '150ms' }}>i</span>
+                                    <span style={{ transitionDelay: '200ms' }}>l</span>
+                                    <span style={{ transitionDelay: '250ms' }}> </span>
+                                    <span style={{ transitionDelay: '300ms' }}>a</span>
+                                    <span style={{ transitionDelay: '350ms' }}>d</span>
+                                    <span style={{ transitionDelay: '400ms' }}>d</span>
+                                    <span style={{ transitionDelay: '450ms' }}>r</span>
+                                    <span style={{ transitionDelay: '500ms' }}>e</span>
+                                    <span style={{ transitionDelay: '550ms' }}>s</span>
+                                    <span style={{ transitionDelay: '600ms' }}>s</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <Footer/>
         </div>
