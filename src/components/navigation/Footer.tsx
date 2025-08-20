@@ -6,7 +6,7 @@ import Play from "../../assets/icon/play.svg"
 
 const Footer = () => {
     return (
-        <footer className="max-w-[1170px] flex flex-col xl:flex-row items-center xl:items-start gap-12 xl:gap-o justify-between m-auto pt-[var(--margin-primary)] ">
+        <footer className="max-w-[1170px] flex flex-col xl:flex-row items-center xl:items-start gap-12 xl:gap-o justify-between m-auto pt-[var(--margin-primary)] text-primary ">
             <div className="flex-center gap-[var(--margin-primary)] ">
                 <div className="flex-row-center gap-2">
                     <img src={Logo} alt="logo" />

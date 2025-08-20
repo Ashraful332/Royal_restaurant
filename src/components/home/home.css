@@ -34,7 +34,7 @@
   }
   /* popular food */
   .hover-image-popular{
-    @apply w-full h-full object-cover scale-100 hover:scale-125 brightness-95 hover:brightness-100 transition-transform duration-[500ms] ease-in-out ;
+    @apply w-full h-full object-cover scale-100 hover:scale-[115%] brightness-95 hover:brightness-100 transition-transform duration-[400ms] ease-in-out ;
   }
   /* our blog image */
   .hover-image-blog{
@@ -64,6 +64,7 @@
     font-size: 14px;
     font-weight: 400;
     color: white;
+    cursor: pointer;
 
     position: relative;
 }

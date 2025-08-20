@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div>
-      <div className='text-primary max-w-screen overflow-x-hidden'>
+      <div className=' max-w-screen overflow-x-hidden'>
         <Navbar/>
       </div>
         
@@ -55,7 +55,7 @@ function App() {
         <Newsletter/>
       </div>
 
-      <div className='text-primary max-w-screen overflow-x-hidden px-[14px] sm:px-[30px]  '>
+      <div className=' max-w-screen overflow-x-hidden px-[14px] sm:px-[30px]  '>
         <Footer/>
       </div>
     </div>

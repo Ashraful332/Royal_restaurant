@@ -1,6 +1,7 @@
 import {  createBrowserRouter,  RouterProvider, } from "react-router";
 import ReactDOM from "react-dom/client";
 import './index.css'
+import './components/home/home.css'
 import App from './App.tsx'
 import { Toaster } from 'react-hot-toast';
 import About from "./page/about/About.tsx";

@@ -13,7 +13,7 @@ const Navbar = () => {
     };
     
     return (
-        <nav className="max-w-[1170px] flex-row-center justify-between m-auto font-normal mt-[30px] mb-5 relative px-[14px] sm:px-[30px]">
+        <nav className="max-w-[1170px] flex-row-center justify-between m-auto font-normal mt-[30px] mb-5 relative px-[14px] sm:px-[30px] text-primary">
             <div className="hidden-nav-show gap-[27px]">
                 <Link to='/'>Home</Link>
                 <Link to='/menu'>Menu</Link>
