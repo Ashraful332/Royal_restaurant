@@ -8,7 +8,9 @@ const Reservation = () => {
             <Navbar/>
             <div className="">
                 <div className="Online-Reservation mb-primary">
-                    <div></div>
+                    <div>
+                        
+                    </div>
                 </div>
                 <div className="max-w-[1170px] mx-auto text-primary  flex flex-col lg:flex-row w-[100%] items-center lg:items-start
                  justify-center lg:justify-between mb-sec ">

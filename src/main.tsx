@@ -9,6 +9,8 @@ import Blog from "./page/blog/Blog.tsx";
 import Contact from "./page/Contact/Contact.tsx";
 import Menu from "./page/menu/Menu.tsx";
 import Reservation from "./page/Reservation/Reservation.tsx";
+import Admin from "./admin/Admin.tsx";
+import Auth from "./admin/auth/Login.tsx";
 
 
 const router = createBrowserRouter([
@@ -18,6 +20,9 @@ const router = createBrowserRouter([
   {  path: "/contact",  element: <Contact/>},
   {  path: "/menu",  element: <Menu/>},
   {  path: "/reservation",  element: <Reservation/>},
+  {  path: "/admin",  element: <Admin/>},
+  {  path: "/auth",  element: <Auth/>},
+
 ]);
 
 const root = document.getElementById("root") as HTMLElement;
