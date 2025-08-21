@@ -8,3 +8,17 @@
     background-size: cover;
     background-position: center;
 }
+
+/* global variables */
+:root {
+  --primary: #FB8F2C;
+}
+
+
+/* ✅ Correct Tailwind custom utility definition */
+@layer utilities {
+  /* Flexbox */
+  .flex-center-dd {
+    @apply flex flex-col items-center;
+  }
+}

@@ -19,7 +19,7 @@ export default function Auth() {
 
                 {/* Mobile Profile Image */}
                 <div className="w-28 h-28 overflow-hidden bg-black rounded-full lg:hidden flex items-center justify-center absolute top-[240px] ">
-                    <img src="https://i.ibb.co.com/7xR5TqRx/vesonema-l-Q2m-TKVRt-N4-unsplash.jpg" alt="my photo" className="object-cover w-24" />
+                    <img src="https://i.ibb.co.com/GvWGMT4T/Screenshot-20250712-211018.png" alt="my photo" className="object-cover h-28 " />
                 </div>
 
                 {/* Right Section */}
