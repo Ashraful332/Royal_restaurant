@@ -11,7 +11,24 @@
 
 /* global variables */
 :root {
-  --primary: #FB8F2C;
+  /* --admin-primary: #0f1535; */
+  /* --admin-sec: #0a0f2b; */
+  --admin-primary: #0f1535;
+  --admin-sec: #0a0f2b;
+  --admin-font: #a7acb1;
+}
+
+/* admin text color */
+.admin-text{
+    color: var(--admin-font);
+}
+/* admin color primary */
+.admin-bg{
+    background-color: var(--admin-primary);
+}
+/* admin color secondary */
+.second-bd{
+    background-color: var(--admin-sec);
 }
 
 
@@ -21,4 +38,34 @@
   .flex-center-dd {
     @apply flex flex-col items-center;
   }
+}
+
+/* add background image on admin home */
+.bg-admin-img{
+    background-image: url("../assets/image/other/blurry-gradient-haikei.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+/* custom scroll bar */
+/* Tailwind Scrollbar Customization */
+.scrollbar-thin {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #66b157 transparent; /* Firefox */
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #6b7280; /* Tailwind gray-500 */
+  border-radius: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
 }

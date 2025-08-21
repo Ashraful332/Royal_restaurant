@@ -5,9 +5,9 @@ import SideBar from "./components/navigation/SideBar"
 
 export default function Admin() {
     return(
-        <div className="flex">
+        <div className="flex bg-admin-img">
             <SideBar/>
-            <div>
+            <div className="h-screen w-[100%] overflow-y-scroll scrollbar-thin ">
                 <AdminNav/>
                 <div>
                     content

@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import Logo from "../../assets/image/Hero/logo.svg"
+import Logo from "../../assets/icon/logoRR.png"
 import Apple from "../../assets/icon/apple.svg"
 import Play from "../../assets/icon/play.svg"
 
@@ -9,7 +9,7 @@ const Footer = () => {
         <footer className="max-w-[1170px] flex flex-col xl:flex-row items-center xl:items-start gap-12 xl:gap-o justify-between m-auto pt-[var(--margin-primary)] text-primary ">
             <div className="flex-center gap-[var(--margin-primary)] ">
                 <div className="flex-row-center gap-2">
-                    <img src={Logo} alt="logo" />
+                    <img src={Logo} alt="logo" className="w-[60px] " />
                     <h2 className="text-2xl font-extrabold">Royal Restaurant</h2>
                 </div>
                 <div>

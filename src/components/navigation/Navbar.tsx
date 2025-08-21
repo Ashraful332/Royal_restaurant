@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import Logo from "../../assets/image/Hero/logo.svg"
+import Logo from "../../assets/icon/logoRR.png"
 import Menu from "../../assets/icon/menu.svg"
 import "./nav.css"
 import { useState } from "react";
