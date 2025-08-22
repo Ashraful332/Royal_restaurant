@@ -11,6 +11,16 @@ import Menu from "./page/menu/Menu.tsx";
 import Reservation from "./page/Reservation/Reservation.tsx";
 import Admin from "./admin/Admin.tsx";
 import Auth from "./admin/auth/Login.tsx";
+import AddBlog from "./admin/pages/AddBlog.tsx";
+import AddMenu from "./admin/pages/AddMenu.tsx";
+import AllBlog from "./admin/pages/AllBlog.tsx";
+import AllMenu from "./admin/pages/AllMenu.tsx";
+import AllOrder from "./admin/pages/AllOrder.tsx";
+import CPassword from "./admin/pages/CPassword.tsx";
+import Mail from "./admin/pages/Mail.tsx";
+import Profile from "./admin/pages/Profile.tsx";
+import Reviews from "./admin/pages/Reviews.tsx";
+import Table from "./admin/pages/Tabile.tsx";
 
 
 const router = createBrowserRouter([
@@ -22,6 +32,17 @@ const router = createBrowserRouter([
   {  path: "/reservation",  element: <Reservation/>},
   {  path: "/admin",  element: <Admin/>},
   {  path: "/auth",  element: <Auth/>},
+  {  path: "/add-blog",  element: <AddBlog />},
+  {  path: "/add-menu",  element: <AddMenu />},
+  {  path: "/all-blog",  element: <AllBlog />},
+  {  path: "/all-menu",  element: <AllMenu />},
+  {  path: "/all-order",  element: <AllOrder />},
+  {  path: "/change-pass",  element: <CPassword />},
+  {  path: "/mail",  element: <Mail />},
+  {  path: "/profile",  element: <Profile />},
+  {  path: "/reservation",  element: <Reservation />},
+  {  path: "/reviews",  element: <Reviews />},
+  {  path: "/tables",  element: <Table />},
 
 ]);
 
