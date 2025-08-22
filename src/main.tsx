@@ -38,7 +38,7 @@ const router = createBrowserRouter([
   {  path: "/all-menu",  element: <AllMenu />},
   {  path: "/all-order",  element: <AllOrder />},
   {  path: "/change-pass",  element: <CPassword />},
-  {  path: "/mail",  element: <Mail />},
+  {  path: "/mails",  element: <Mail />},
   {  path: "/profile",  element: <Profile />},
   {  path: "/reservation",  element: <Reservation />},
   {  path: "/reviews",  element: <Reviews />},
