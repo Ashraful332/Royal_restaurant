@@ -10,7 +10,12 @@ export default function Admin() {
             <div className="h-screen w-[100%] overflow-y-scroll scrollbar-thin ">
                 <AdminNav/>
                 <div>
-                    content
+                    <p>neet menu</p>
+                    <p>neet order</p>
+                    <p>total visitor</p>
+                    <p>total incume</p>
+                    <p>total order</p>
+                    <p>all mail</p>
                 </div>
                 <AdminFooter/>
             </div>

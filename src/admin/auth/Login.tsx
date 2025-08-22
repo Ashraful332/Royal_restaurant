@@ -13,7 +13,7 @@ export default function Auth() {
                 <div className="w-full lg:w-[50vw] h-[300px] lg:h-screen auth-photo p-6 flex flex-col justify-center lg:justify-start">
                     <h2 className="text-white text-3xl font-bold mb-4">Login as Admin</h2>
                     <p className="text-white text-sm sm:text-base w-full sm:w-[70%] leading-relaxed">
-                        Enter admin name and password to login as admin. If you are an imposter or hacker, I say fuck you.
+                        Enter admin name and password to login as admin. If you are an imposter or hacker,dot hack my website.
                     </p>
                 </div>
 
