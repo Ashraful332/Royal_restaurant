@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 import "./contact.css"
 import Footer from "../../components/navigation/Footer";
@@ -13,7 +14,7 @@ const Contact = () => {
         message: ''
     });
 
-    const handleChange = (e) => {
+    const handleChange = (e: { target: { name: any; value: any; }; }) => {
         const { name, value } = e.target;
         setFormData(prev => ({
         ...prev,
@@ -21,7 +22,7 @@ const Contact = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         // Handle form submission logic here
         console.log('Form submitted:', formData);
