@@ -20,6 +20,7 @@ const AddBlog = () => {
       SortDes: (form.SortDes as HTMLInputElement).value,
       photoUrl: (form.photoUrl as HTMLInputElement).value,
       description: content,
+      View : 0
     };
 
     console.log("Blog Data:", BlogData);
