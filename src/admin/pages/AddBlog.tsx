@@ -3,7 +3,7 @@ import SideBar from "../components/navigation/SideBar";
 import AdminNav from "../components/navigation/AdminNav";
 import AdminFooter from "../components/navigation/AdminFooter";
 import axios from "axios";
-import Editor from "../../components/ui/editor/JoditEditor";
+import Editor from "../components/ui/editor/JoditEditor";
 // import Editor from '../components/ui/editor/JoditEditor'
 
 const AdminUrl = import.meta.env.VITE_ADMIN_URL;
