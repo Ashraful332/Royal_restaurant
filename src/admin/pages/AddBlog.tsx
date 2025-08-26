@@ -1,13 +1,16 @@
-import type { FormEvent } from "react";
+import { useState, type FormEvent } from "react";
 import SideBar from "../components/navigation/SideBar";
 import AdminNav from "../components/navigation/AdminNav";
 import AdminFooter from "../components/navigation/AdminFooter";
 import axios from "axios";
-
+import Editor from "../../components/ui/editor/JoditEditor";
+// import Editor from '../components/ui/editor/JoditEditor'
 
 const AdminUrl = import.meta.env.VITE_ADMIN_URL;
 
 const AddBlog = () => {
+  const [content, setContent] = useState('');
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -15,18 +18,19 @@ const AddBlog = () => {
     const BlogData = {
       title: (form.Title as HTMLInputElement).value,
       photoUrl: (form.photoUrl as HTMLInputElement).value,
-      description: (form.Description as HTMLTextAreaElement).value,
+      description: content,
     };
 
     console.log("Blog Data:", BlogData);
-    try{
-      const response = axios.post(`${AdminUrl}/add-blog`,BlogData)
-      console.log('the blog is add :',response);
-      
-    }catch(error){
-      console.error("error is coming on post blog",error)
+    try {
+      const response = axios.post(`${AdminUrl}/add-blog`, BlogData)
+      console.log('the blog is add :', response);
+
+    } catch (error) {
+      console.error("error is coming on post blog", error)
     }
-    form.reset(); // submit from was resat
+    setContent(''); // submit from was resat
+    form.reset(); // reset editor
   };
 
   return (
@@ -37,7 +41,7 @@ const AddBlog = () => {
         <div className="flex justify-center items-center min-h-screen">
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col w-full max-w-md gap-4 p-6 bg-white shadow-lg rounded-2xl"
+            className="flex flex-col w-full max-w-xl gap-4 p-6 bg-white text-black shadow-lg rounded-2xl"
           >
             <h2 className="text-xl font-semibold text-center text-gray-800 mb-2">
               Add New Blog Post
@@ -63,15 +67,7 @@ const AddBlog = () => {
               />
             </label>
 
-            <label className="flex flex-col">
-              <span className="text-gray-700 font-medium">Description</span>
-              <textarea
-                name="Description"
-                rows={4}
-                required
-                className="bg-gray-100 border rounded-xl px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-amber-500"
-              />
-            </label>
+            <Editor value={content} onChange={setContent} />
 
             <button
               type="submit"
