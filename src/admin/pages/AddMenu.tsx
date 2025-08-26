@@ -2,20 +2,32 @@ import { type FormEvent } from "react";
 import SideBar from "../components/navigation/SideBar";
 import AdminNav from "../components/navigation/AdminNav";
 import AdminFooter from "../components/navigation/AdminFooter";
+    import axios from 'axios';
+
+const AdminUrl = import.meta.env.VITE_ADMIN_URL;
 
 const AddMenu = () => {
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
-    const data = {
+    const MenuData = {
       foodName: (form.FoodName as HTMLInputElement).value,
+      PhotoUrl: (form.PhotoUrl as HTMLInputElement).value,
       price: (form.price as HTMLInputElement).value,
       details: (form.details as HTMLInputElement).value,
       rating: (form.rating as HTMLInputElement).value,
       type: (form.type as HTMLInputElement).value,
     };
-    console.log("Form Data:", data);
-    // 👉 এখানে তুমি axios/fetch দিয়ে সার্ভারে পাঠাতে পারবে
+    console.log("Form Data:", MenuData);
+    
+    try{
+        const response = await axios.post(`${AdminUrl}/add-menu`,MenuData)
+        console.log("send menu into database",response);
+        
+    }catch(error){
+        console.error("error is coming on post menu",error)
+    }
+    form.reset();
   };
 
   return (
@@ -37,6 +49,15 @@ const AddMenu = () => {
                     <input
                         type="text"
                         name="FoodName"
+                        required
+                        className="bg-gray-100 border rounded-xl px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                    />
+                    </label>
+                    <label className="flex flex-col">
+                    <span className="text-gray-700 font-medium">Photo url</span>
+                    <input
+                        type="text"
+                        name="PhotoUrl"
                         required
                         className="bg-gray-100 border rounded-xl px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-amber-500"
                     />

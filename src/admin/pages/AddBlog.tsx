@@ -2,26 +2,31 @@ import type { FormEvent } from "react";
 import SideBar from "../components/navigation/SideBar";
 import AdminNav from "../components/navigation/AdminNav";
 import AdminFooter from "../components/navigation/AdminFooter";
+import axios from "axios";
+
+
+const AdminUrl = import.meta.env.VITE_ADMIN_URL;
 
 const AddBlog = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
 
-    const data = {
+    const BlogData = {
       title: (form.Title as HTMLInputElement).value,
       photoUrl: (form.photoUrl as HTMLInputElement).value,
       description: (form.Description as HTMLTextAreaElement).value,
     };
 
-    console.log("Blog Data:", data);
-
-    // 👉 এখানে তুমি axios/fetch দিয়ে সার্ভারে ডেটা পাঠাতে পারবে
-    // axios.post("/api/blogs", data)
-    //   .then(res => console.log("Blog saved:", res.data))
-    //   .catch(err => console.error(err));
-
-    form.reset(); // সাবমিটের পরে ফর্ম রিসেট হয়ে যাবে
+    console.log("Blog Data:", BlogData);
+    try{
+      const response = axios.post(`${AdminUrl}/add-blog`,BlogData)
+      console.log('the blog is add :',response);
+      
+    }catch(error){
+      console.error("error is coming on post blog",error)
+    }
+    form.reset(); // submit from was resat
   };
 
   return (
