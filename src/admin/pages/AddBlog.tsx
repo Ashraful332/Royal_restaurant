@@ -17,6 +17,7 @@ const AddBlog = () => {
 
     const BlogData = {
       title: (form.Title as HTMLInputElement).value,
+      SortDes: (form.SortDes as HTMLInputElement).value,
       photoUrl: (form.photoUrl as HTMLInputElement).value,
       description: content,
     };
@@ -58,6 +59,16 @@ const AddBlog = () => {
             </label>
 
             <label className="flex flex-col">
+              <span className="text-gray-700 font-medium">Sort Description</span>
+              <input
+                type="text"
+                name="SortDes"
+                required
+                className="bg-gray-100 border rounded-xl px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-amber-500"
+              />
+            </label>
+
+            <label className="flex flex-col">
               <span className="text-gray-700 font-medium">Photo URL</span>
               <input
                 type="text"
@@ -66,6 +77,7 @@ const AddBlog = () => {
                 className="bg-gray-100 border rounded-xl px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-amber-500"
               />
             </label>
+
 
             <Editor value={content} onChange={setContent} />
 
