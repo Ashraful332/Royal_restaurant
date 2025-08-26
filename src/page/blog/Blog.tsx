@@ -1,16 +1,45 @@
+import { useEffect, useState } from "react";
 import Footer from "../../components/navigation/Footer";
 import Navbar from "../../components/navigation/Navbar";
 import "./blog.css"
+import axios from "axios";
+
+const AdminUrl = import.meta.env.VITE_ADMIN_URL;
+
+type BlogData = {
+    _id: string,
+    title: string,
+    SortDes: string,
+    photoUrl: string,
+    description: string,
+    View: string
+
+}
 
 const Blog = () => {
+    const [blogs, setBlogs] = useState<BlogData[]>([])
+
+    // lode the blog
+    useEffect(() => {
+        async function LoadBlog() {
+            try {
+                const response = await axios.get(`${AdminUrl}/all-blog`)
+                setBlogs(response.data)
+            } catch (error) {
+                console.error("error is comming on get blog data")
+            }
+
+        }
+        LoadBlog()
+    }, [])
     return (
         <div className="text-primary max-w-screen overflow-x-hidden">
-            <Navbar/>
+            <Navbar />
             <div className="flex-center max-w-[1170px] mx-auto px-[14px] sm:px-[30px] mt-sec ">
-                <div>
+                <div className="mb-high">
                     <div className="mb-sec">
                         <hr />
-                         <h2 className="text-header-blog my-[30px] ">Restaurant Management & Growth Blog</h2>
+                        <h2 className="text-header-blog my-[30px] ">Restaurant Management & Growth Blog</h2>
                         <hr />
                     </div>
                     <div className="flex flex-col lg:flex-row gap-5">
@@ -25,7 +54,37 @@ const Blog = () => {
                         </div>
                     </div>
                 </div>
-                <div></div>
+                <div>
+                    <hr />
+                    <h3 className="text-center text-white text-lg md:text-4xl font-bold mt-sec">All Blog</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 md:gap-6 md:p-4 mb-sec">
+                        {blogs.map((blog) => (
+                            <div key={blog._id} className=" w-[97vw] sm:w-[370px] ">
+                                <div className="w-[97vw] sm:w-[350px] h-auto sm:h-[300px] overflow-hidden object-center relative ">
+                                    <img src={blog.photoUrl} alt="photo 1" className="hover-image-popular " />
+                                </div>
+                                <div>
+                                    <div className="mt-5 flex justify-between text-2xl">
+                                        <h4 className="text-lg text-white">
+                                            {blog.title}
+                                        </h4>
+                                    </div>
+                                    <p className="text-[var(--pTx-color)] text-sm pt-[6px] pr-2 pb-4  ">
+                                        {blog.SortDes}
+                                    </p>
+                                    <div className="flex justify-between">
+                                        <button className="Order-btn ">
+                                            View Details
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <hr />
+                </div>
                 <div className="flex flex-col lg:flex-row gap-5 mt-high">
                     <div>
                         <img src="https://i.ibb.co.com/v40w4pRL/637b219c75082dada789af56-Rectangle-21.png" alt="image" />
@@ -38,20 +97,20 @@ const Blog = () => {
                         <div className=" mt-[10vh] lg:mt-[30vh] ">
                             <div className="relative">
                                 <input
-                                id="username"
-                                name="username"
-                                type="text"
-                                className="border-b w-[90vw] lg:w-[400px] border-gray-300 py-1 focus:border-b-2 focus:border-amber-500 transition-colors focus:outline-none peer bg-inherit"
+                                    id="username"
+                                    name="username"
+                                    type="text"
+                                    className="border-b w-[90vw] lg:w-[400px] border-gray-300 py-1 focus:border-b-2 focus:border-amber-500 transition-colors focus:outline-none peer bg-inherit"
                                 />
                                 <label
-                                className="absolute left-0 top-1 cursor-text peer-focus:text-xs peer-focus:-top-4 transition-all peer-focus:text-amber-500"
+                                    className="absolute left-0 top-1 cursor-text peer-focus:text-xs peer-focus:-top-4 transition-all peer-focus:text-amber-500"
                                 >Name</label>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     );
 };
