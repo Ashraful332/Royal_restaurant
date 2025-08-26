@@ -6,6 +6,7 @@ import line from "../../assets/icon/line.png";
 import "../page.css"
 import { useEffect, useState } from "react";
 import axios from "axios";
+import OrderNow from "../../components/ui/order/OrderNow";
 
 
 const AdminUrl = import.meta.env.VITE_ADMIN_URL;
@@ -138,7 +139,7 @@ const Menu = () => {
                             <div key={item._id}>
                                 <div className=" w-[97vw] sm:w-[370px] ">
                                     <div className="w-[97vw] sm:w-[370px] h-auto sm:h-[300px] overflow-hidden object-center relative ">
-                                        <img src={Photo1} alt="photo 1" className="hover-image-popular " />
+                                        <img src={item.PhotoUrl} alt="photo 1" className="hover-image-popular " />
                                     </div>
                                     <div className="flex flex-col h-[170px] justify-between">
                                         <div>
@@ -152,9 +153,14 @@ const Menu = () => {
                                         </div>
 
                                         <div className="flex justify-between">
-                                            <button className="Order-btn ">
-                                                Order Now
-                                            </button>
+                                            <OrderNow
+                                                _id={item._id}
+                                                foodName={item.foodName}
+                                                price={item.price}
+                                                details={item.details}
+                                                photo={item.PhotoUrl || "photo is not loading"}
+                                            />
+
                                             <div className="flex-row-center gap-[2px]">
                                                 {Array.from({ length: item.rating }, (_, i) => (
                                                     <img key={i} src={star} alt="star" />
