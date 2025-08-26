@@ -22,7 +22,7 @@ const AddMenu = () => {
     
     try{
         const response = await axios.post(`${AdminUrl}/add-menu`,MenuData)
-        console.log("send menu into database",response);
+        console.log("menu is add database",response);
         
     }catch(error){
         console.error("error is coming on post menu",error)
@@ -35,7 +35,7 @@ const AddMenu = () => {
         <SideBar/>
         <div className="h-screen w-[100%] overflow-y-scroll scrollbar-thin ">
             <AdminNav/>
-             <div className="flex justify-center items-center min-h-screen">
+             <div className="flex justify-center items-center min-h-screen text-gray-700">
                 <form
                     onSubmit={handleSubmit}
                     className="flex flex-col w-full max-w-md gap-4 p-6 bg-white shadow-lg rounded-2xl"
