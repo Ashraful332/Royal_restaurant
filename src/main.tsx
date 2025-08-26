@@ -21,6 +21,7 @@ import Mail from "./admin/pages/Mail.tsx";
 import Profile from "./admin/pages/Profile.tsx";
 import Reviews from "./admin/pages/Reviews.tsx";
 import Table from "./admin/pages/Tabile.tsx";
+import BlogDetails from "./page/blog/details/BlogDetails.tsx";
 
 
 const router = createBrowserRouter([
@@ -35,6 +36,7 @@ const router = createBrowserRouter([
   {  path: "/add-blog",  element: <AddBlog />},
   {  path: "/add-menu",  element: <AddMenu />},
   {  path: "/all-blog",  element: <AllBlog />},
+  {  path: "/blog/:id",  element: <BlogDetails />},
   {  path: "/all-menu",  element: <AllMenu />},
   {  path: "/all-order",  element: <AllOrder />},
   {  path: "/change-pass",  element: <CPassword />},

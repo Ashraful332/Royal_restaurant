@@ -3,6 +3,7 @@ import Footer from "../../components/navigation/Footer";
 import Navbar from "../../components/navigation/Navbar";
 import "./blog.css"
 import axios from "axios";
+import { Link } from "react-router";
 
 const AdminUrl = import.meta.env.VITE_ADMIN_URL;
 
@@ -73,10 +74,10 @@ const Blog = () => {
                                         {blog.SortDes}
                                     </p>
                                     <div className="flex justify-between">
-                                        <button className="Order-btn ">
+                                        <Link to={`/blog/${blog._id}`} 
+                                        className="Order-btn ">
                                             View Details
-                                        </button>
-
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
