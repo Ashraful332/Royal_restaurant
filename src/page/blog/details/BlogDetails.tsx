@@ -23,7 +23,7 @@ export default function BlogDetails() {
     // fetch the data
     useEffect(()=>{
         async function LoadData() {
-           const response = await axios.get(`${AdminUrl}`,{id}) 
+           const response = await axios.post(`${AdminUrl}`,{id}) 
            setBlogs(response.data)
         }
         LoadData()
