@@ -17,21 +17,26 @@ type BlogData = {
 
 
 export default function BlogDetails() {
-    const [blogs,setBlogs] = useState<BlogData[]>([])
+    const [blogs, setBlogs] = useState<BlogData[]>([])
     const { id } = useParams(); // fecht the id of blog
-    
+
     // fetch the data
-    useEffect(()=>{
+    useEffect(() => {
         async function LoadData() {
-           const response = await axios.post(`${AdminUrl}`,{id}) 
-           setBlogs(response.data)
+            try {
+                const response = await axios.post(`${AdminUrl}`, { id })
+                setBlogs(response.data)
+                console.log(response.data);
+            } catch (error) {
+                console.error("the error is coming on load blog", error)
+            }
         }
         LoadData()
-    },[])
+    }, [])
 
-    return(
+    return (
         <div>
-            {blogs.map((blog)=>(
+            {blogs.map((blog) => (
                 <div key={blog._id}>
                     <img src={blog.photoUrl} alt="Blog image" />
                     <p>{blog.title}</p>
