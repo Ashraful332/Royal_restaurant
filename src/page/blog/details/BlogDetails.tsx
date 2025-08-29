@@ -93,7 +93,7 @@ export default function BlogDetails() {
                 {/* coment section */}
                 <div className="flex flex-col items-center mt-sec mb-sec">
                     <CommentBlog
-                        _id={blogs._id}
+                        _id={blogs}
                     />
                 </div>
             </div>

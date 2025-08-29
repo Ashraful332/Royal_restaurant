@@ -2,15 +2,24 @@ import axios from "axios";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 
-type Id = {
-    _id: string
+type BlogData = {
+    _id: string,
+    title: string,
+    SortDes: string,
+    photoUrl: string,
+    description: string,
+    View: string
+
 }
 
-export default function CommentBlog({ _id }: Id) {
+
+export default function CommentBlog(blogs: BlogData) {
     const [photo, setPhoto] = useState("");
+    const [blogData, setBlogData] = useState(blogs || { comments: [] });
     const [comment, setComment] = useState('');
     const [isOpen, setIsOpen] = useState(false)
 
+    const _id = blogs._id
     console.log(_id);
     const apiKey = import.meta.env.VITE_IMAGEBB_API;
     const publicApi = import.meta.env.VITE_API_URL;
@@ -68,13 +77,30 @@ export default function CommentBlog({ _id }: Id) {
         console.log("The comment data :", comment_data);
 
         try {
-            const response = await axios.patch(`${publicApi}`, { comment_data })
+            const response = await axios.patch(`${publicApi}/comment`, { comment_data })
             const data = response.data
 
             if (data.ok) {
-                toast.success("comment is add sussesfully!");
+                toast.success("Comment added successfully!");
 
+                const bdTime = new Date().toLocaleString("en-US", {
+                    timeZone: "Asia/Dhaka",
+                    year: "numeric",
+                    month: "2-digit",
+                    day: "2-digit",
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    second: "2-digit",
+                    hour12: true   // AM/PM সহ দেখাবে
+                });
 
+                // Update local state immediately
+                setBlogData((prev: any) => ({
+                    ...prev,
+                    comments: [...(prev.comments || []), { ...comment_data, date: bdTime }],
+                }));
+
+                form.reset();
             } else {
                 toast.error(data.message || "Failed to add comment.");
             }
