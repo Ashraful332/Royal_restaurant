@@ -57,32 +57,35 @@ export default function BlogDetails() {
 
     return (
         <div>
-            <Navbar/>
-            <div >
-                <img src={blogs.photoUrl} alt="Blog image" />
-                <p>{blogs.title}</p>
-                <p>{blogs.SortDes}</p>
-                <p>{blogs.View}</p>
-                {/* Responsive iframe CSS */}
-                <style>
-                    {`
-                .responsive-iframe {
-                    position: relative;
-                    width: 100%;
-                    height: 0;
-                    padding-bottom: 56.25%;
-                    margin-top: 1rem;
-                    margin-bottom: 1rem;
-                }
-                .responsive-iframe iframe {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    left: 0;
-                    top: 0;
-                }
-                `}
-                </style>
+            <Navbar />
+            <div className="flex flex-col items-center mt-primary" >
+                <div className="mb-sec ">
+                    <img src={blogs.photoUrl} alt="Blog image" className="w-[500px] " />
+                    <p>{blogs.title}</p>
+                    <p>{blogs.SortDes}</p>
+                    <p>{blogs.View}</p>
+                    {/* Responsive iframe CSS */}
+                    <style>
+                        {`
+                        .responsive-iframe {
+                            position: relative;
+                            width: 100%;
+                            height: 0;
+                            padding-bottom: 56.25%;
+                            margin-top: 1rem;
+                            margin-bottom: 1rem;
+                        }
+                        .responsive-iframe iframe {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            left: 0;
+                            top: 0;
+                        }
+                        `}
+                    </style>
+                </div>
+
                 <div
                     className="prose prose-lg mx-w-[90vw] lg:max-w-[70vw] mx-auto bg-[#0c0c0c7a] rounded-2xl p-6 "
                     dangerouslySetInnerHTML={{ __html: safeHtml }}
@@ -90,11 +93,11 @@ export default function BlogDetails() {
                 {/* coment section */}
                 <div className="flex flex-col items-center mt-sec mb-sec">
                     <CommentBlog
-                    _id={blogs._id}
+                        _id={blogs._id}
                     />
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }
