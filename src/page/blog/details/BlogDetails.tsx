@@ -6,7 +6,7 @@ import Footer from "../../../components/navigation/Footer";
 import CommentBlog from "./Comment";
 
 
-const AdminUrl = import.meta.env.VITE_ADMIN_URL;
+const Public = import.meta.env.VITE_API_URL;
 
 type BlogData = {
     _id: string,
@@ -37,8 +37,8 @@ export default function BlogDetails() {
     useEffect(() => {
         async function LoadData() {
             try {
-                const response = await axios.post(`${AdminUrl}/blog-details`, { id })
-                // const response = await axios.get(`${AdminUrl}/blog-details-all/${id}`)
+                const response = await axios.post(`${Public}/blog-details-all`, { id })
+                // const response = await axios.get(`${Public}/blog-details-all/${id}`)
 
                 setBlogs(response.data)
                 console.log(response.data);
