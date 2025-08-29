@@ -1,8 +1,9 @@
-import axios from "axios";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 
 type BlogData = {
+    comments: any;
     _id: string,
     title: string,
     SortDes: string,
@@ -13,14 +14,21 @@ type BlogData = {
 }
 
 
-export default function CommentBlog(blogs: BlogData) {
+type CommentBlogProps = {
+    MyBlogData: BlogData
+}
+
+export default function CommentBlog({ MyBlogData }: CommentBlogProps) {
     const [photo, setPhoto] = useState("");
-    const [blogData, setBlogData] = useState(blogs || { comments: [] });
+    const [blogData, setBlogData] = useState(MyBlogData || { comments: [] });
     const [comment, setComment] = useState('');
     const [isOpen, setIsOpen] = useState(false)
 
-    const _id = blogs._id
-    console.log(_id);
+    console.log(blogData, "and the blog data is : ", MyBlogData);
+
+
+    const _id = MyBlogData._id
+    console.log("Object Id", _id);
     const apiKey = import.meta.env.VITE_IMAGEBB_API;
     const publicApi = import.meta.env.VITE_API_URL;
 
@@ -64,24 +72,31 @@ export default function CommentBlog(blogs: BlogData) {
         const form = event.currentTarget
 
         // comment data
-        const Comment = (form.elements.namedItem("comment") as HTMLInputElement)?.value;
-        const Name = (form.elements.namedItem("Name") as HTMLInputElement)?.value;
-        const Email = (form.elements.namedItem("Email") as HTMLInputElement)?.value;
+        const comment = (form.elements.namedItem("comment") as HTMLInputElement)?.value;
+        const name = (form.elements.namedItem("Name") as HTMLInputElement)?.value;
+        const email = (form.elements.namedItem("Email") as HTMLInputElement)?.value;
 
         // set comment on object
         const comment_data = {
-            Comment, Name, Email,
+            comment, name, email,
             id: _id,
             photo
         }
         console.log("The comment data :", comment_data);
 
         try {
-            const response = await axios.patch(`${publicApi}/comment`, { comment_data })
-            const data = response.data
+            const response = await fetch(`${publicApi}/comment`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(comment_data),
+            });
+            const data = await response.json();
+            // const data = response.data
 
-            if (data.ok) {
-                toast.success("Comment added successfully!");
+            if (response.ok) {
+                toast.success("Comment added successfully!", data);
 
                 const bdTime = new Date().toLocaleString("en-US", {
                     timeZone: "Asia/Dhaka",
@@ -100,7 +115,6 @@ export default function CommentBlog(blogs: BlogData) {
                     comments: [...(prev.comments || []), { ...comment_data, date: bdTime }],
                 }));
 
-                form.reset();
             } else {
                 toast.error(data.message || "Failed to add comment.");
             }
@@ -129,20 +143,28 @@ export default function CommentBlog(blogs: BlogData) {
                     comment
                 </button>
             </form>
-            <div className="flex gap-3 mt-10">
-                <div>
-                    <img src="https://i.ibb.co.com/GvWGMT4T/Screenshot-20250712-211018.png" alt="user photo" className="rounded-full w-12 h-12 " />
-                </div>
-                <div className="p-6 bg-[#0c0c0c7a] rounded-2xl ">
-                    <div className=" flex justify-between text-center ">
-                        <p className="text-xs font-semibold text-[#ffffffd2] ">name</p>
-                        <p className="text-xs font-semibold text-[#ffffff70] ">date and time</p>
+            {blogData.comments?.map((cmt: any, index: number) => (
+                <div key={index} className="w-[97vw] sm:w-[80vw] lg:w-[700px] ">
+                    <div className="flex gap-3 mt-10">
+                        <div className="w-14 ">
+                            <img
+                                src={cmt?.photo}
+                                alt="user photo"
+                                className="rounded-full w-12 h-12 object-cover "
+                            />
+                        </div>
+                        <div className="p-6 bg-[#0c0c0c7a] rounded-2xl w-full">
+                            <div className="flex justify-between items-center mb-2">
+                                <p className="text-sm font-semibold text-white">{cmt?.name}</p>
+                                <p className="text-xs text-gray-400">{cmt?.date}</p>
+                            </div>
+                            <div>
+                                <p className="text-gray-200">{cmt?.comment}</p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <p>commante text , my comment , user commant</p>
-                    </div>
                 </div>
-            </div>
+            ))}
 
             {/* modal */}
             {isOpen && (

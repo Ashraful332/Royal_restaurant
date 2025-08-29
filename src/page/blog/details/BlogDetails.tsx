@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
@@ -93,8 +94,7 @@ export default function BlogDetails() {
                 {/* coment section */}
                 <div className="flex flex-col items-center mt-sec mb-sec">
                     <CommentBlog
-                        _id={blogs}
-                    />
+                        MyBlogData={blogs} />
                 </div>
             </div>
             <Footer />
