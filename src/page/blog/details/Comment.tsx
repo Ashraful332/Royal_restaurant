@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import toast from "react-hot-toast";
 
 type Id = {
@@ -46,6 +46,25 @@ export default function CommentBlog({ _id }: Id) {
     };
 
     // handel commant blog
+    const handelcommentBlog = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        const form = event.currentTarget
+        
+        // comment data
+        const Comment = (form.elements.namedItem("comment") as HTMLInputElement)?.value;
+        const Name = (form.elements.namedItem("Name") as HTMLInputElement)?.value;
+        const Email = (form.elements.namedItem("Email") as HTMLInputElement)?.value;
+
+        // set comment on object
+        const comment_data = {
+            Comment,Name,Email,
+            id:_id,
+            photo
+        }
+        console.log("The comment data :",comment_data);
+        
+    }
+
 
     return (
         <div>
@@ -78,58 +97,78 @@ export default function CommentBlog({ _id }: Id) {
 
             {/* modal */}
             {isOpen && (
-                <div className="fixed inset-0 bg-[#08080898]  bg-opacity-60 flex items-center justify-center z-50 ">
-                    <div className="bg-[#d7d4d4f2] rounded-2xl shadow-2xl p-6 w-[90%] sm:w-[500px] relative text-black ">
+                <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 backdrop-blur-sm">
+                    <div className="bg-white/90 rounded-2xl shadow-2xl p-6 w-[90%] sm:w-[500px] relative text-gray-900">
                         {/* Close Button */}
                         <button
                             onClick={() => setIsOpen(false)}
-                            className="absolute top-1 right-1 text-xl w-10 h-10  rounded-full bg-white "
+                            className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 hover:bg-red-500 hover:text-white shadow-2xs border-[#0000001c] border-[0.4px] transition-colors"
                         >
                             ✕
                         </button>
 
-                        <p className="font-semibold text-black">commant: <span className="text-sm text-[#000000d8] italic "> {comment}</span></p>
-                        <form
-                            // onSubmit={ }
-                            className="flex flex-col gap-3">
+                        <h2 className="text-lg font-semibold mb-4">
+                            Comment:{" "}
+                            <span className="text-sm text-gray-600 italic">{comment}</span>
+                        </h2>
 
-                            <input type="text" name="coment" id=""
-                                className="border rounded-2xl py-1 px-2"
+                        <form
+                            onSubmit={handelcommentBlog}
+                            className="flex flex-col gap-4"
+                        >
+                            <input
+                                type="text"
+                                name="comment"
+                                placeholder="Write your comment..."
+                                className="border border-gray-300 rounded-xl py-2 px-3 focus:ring-2 focus:ring-primary/70 focus:outline-none"
                                 value={comment}
                                 required
-                                onChange={(e) => setComment(e.target.value)} />
-
-                            <input type="text" name="Name"
-                                placeholder="Name"
-                                required
-                                className="border " />
-
-                            <input type="email" name="Email"
-                                placeholder="Email"
-                                required
-                                className="border" />
-
-                            <label className="block text-sm font-medium mb-1">Photo</label>
-                            <input
-                                id="picture"
-                                type="file"
-                                accept="image/*"
-                                required
-                                onChange={(e) => {
-                                    const file = e.target.files?.[0];
-                                    if (file) {
-                                        handleFileSelect(file);
-                                    }
-                                }}
-                                className="w-full text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-pink-100 file:text-pink-700 hover:file:bg-pink-200 mb-4"
+                                onChange={(e) => setComment(e.target.value)}
                             />
+
+                            <input
+                                type="text"
+                                name="Name"
+                                placeholder="Your Name"
+                                required
+                                className="border border-gray-300 rounded-xl py-2 px-3 focus:ring-2 focus:ring-primary/70 focus:outline-none"
+                            />
+
+                            <input
+                                type="email"
+                                name="Email"
+                                placeholder="Your Email"
+                                required
+                                className="border border-gray-300 rounded-xl py-2 px-3 focus:ring-2 focus:ring-primary/70 focus:outline-none"
+                            />
+
+                            <div>
+                                <label className="block text-sm font-medium mb-1">Photo</label>
+                                <input
+                                    id="picture"
+                                    type="file"
+                                    accept="image/*"
+                                    required
+                                    onChange={(e) => {
+                                        const file = e.target.files?.[0];
+                                        if (file) {
+                                            handleFileSelect(file);
+                                        }
+                                    }}
+                                    className="w-full text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-medium file:bg-amber-400 file:text-white hover:file:bg-amber-600 transform-fill duration-300"
+                                />
+                            </div>
 
                             <button
                                 type="submit"
-                                className="bg-primary py-2 px-4 rounded-2xl font-medium">commant</button>
+                                className="bg-primary text-white py-2 px-4 rounded-xl font-medium shadow hover:bg-primary/90 transition"
+                            >
+                                Submit Comment
+                            </button>
                         </form>
                     </div>
                 </div>
+
             )}
         </div>
     )
