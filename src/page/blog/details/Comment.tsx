@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 
@@ -9,8 +10,11 @@ export default function CommentBlog({ _id }: Id) {
     const [photo, setPhoto] = useState("");
     const [comment, setComment] = useState('');
     const [isOpen, setIsOpen] = useState(false)
+
     console.log(_id);
     const apiKey = import.meta.env.VITE_IMAGEBB_API;
+    const publicApi = import.meta.env.VITE_API_URL;
+
 
     // make the form stable
     const handelLogCom = (event: { preventDefault: () => void; }) => {
@@ -46,10 +50,10 @@ export default function CommentBlog({ _id }: Id) {
     };
 
     // handel commant blog
-    const handelcommentBlog = (event: React.FormEvent<HTMLFormElement>) => {
+    const handelcommentBlog = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const form = event.currentTarget
-        
+
         // comment data
         const Comment = (form.elements.namedItem("comment") as HTMLInputElement)?.value;
         const Name = (form.elements.namedItem("Name") as HTMLInputElement)?.value;
@@ -57,12 +61,31 @@ export default function CommentBlog({ _id }: Id) {
 
         // set comment on object
         const comment_data = {
-            Comment,Name,Email,
-            id:_id,
+            Comment, Name, Email,
+            id: _id,
             photo
         }
-        console.log("The comment data :",comment_data);
-        
+        console.log("The comment data :", comment_data);
+
+        try {
+            const response = await axios.patch(`${publicApi}`, { comment_data })
+            const data = response.data
+
+            if (data.ok) {
+                toast.success("comment is add sussesfully!");
+
+
+            } else {
+                toast.error(data.message || "Failed to add comment.");
+            }
+
+        } catch (error) {
+            console.error("Error adding comment:", error);
+            toast.error("Something went wrong.");
+        }
+
+        // reset the form data
+        form.reset();
     }
 
 

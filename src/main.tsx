@@ -1,4 +1,4 @@
-import {  createBrowserRouter,  RouterProvider, } from "react-router";
+import { createBrowserRouter, RouterProvider, } from "react-router";
 import ReactDOM from "react-dom/client";
 import './index.css'
 import './components/home/home.css'
@@ -22,29 +22,31 @@ import Profile from "./admin/pages/Profile.tsx";
 import Reviews from "./admin/pages/Reviews.tsx";
 import Table from "./admin/pages/Tabile.tsx";
 import BlogDetails from "./page/blog/details/BlogDetails.tsx";
+import { store } from './app/store'
+import { Provider } from 'react-redux'
 
 
 const router = createBrowserRouter([
-  {  path: "/",  element: <App/>},
-  {  path: "/about",  element: <About/>},
-  {  path: "/blog",  element: <Blog/>},
-  {  path: "/contact",  element: <Contact/>},
-  {  path: "/menu",  element: <Menu/>},
-  {  path: "/reservation",  element: <Reservation/>},
-  {  path: "/admin",  element: <Admin/>},
-  {  path: "/auth",  element: <Auth/>},
-  {  path: "/add-blog",  element: <AddBlog />},
-  {  path: "/add-menu",  element: <AddMenu />},
-  {  path: "/all-blog",  element: <AllBlog />},
-  {  path: "/blog/:id",  element: <BlogDetails />},
-  {  path: "/all-menu",  element: <AllMenu />},
-  {  path: "/all-order",  element: <AllOrder />},
-  {  path: "/change-pass",  element: <CPassword />},
-  {  path: "/mails",  element: <Mail />},
-  {  path: "/profile",  element: <Profile />},
-  {  path: "/reservation",  element: <Reservation />},
-  {  path: "/reviews",  element: <Reviews />},
-  {  path: "/tables",  element: <Table />},
+  { path: "/", element: <App /> },
+  { path: "/about", element: <About /> },
+  { path: "/blog", element: <Blog /> },
+  { path: "/contact", element: <Contact /> },
+  { path: "/menu", element: <Menu /> },
+  { path: "/reservation", element: <Reservation /> },
+  { path: "/admin", element: <Admin /> },
+  { path: "/auth", element: <Auth /> },
+  { path: "/add-blog", element: <AddBlog /> },
+  { path: "/add-menu", element: <AddMenu /> },
+  { path: "/all-blog", element: <AllBlog /> },
+  { path: "/blog/:id", element: <BlogDetails /> },
+  { path: "/all-menu", element: <AllMenu /> },
+  { path: "/all-order", element: <AllOrder /> },
+  { path: "/change-pass", element: <CPassword /> },
+  { path: "/mails", element: <Mail /> },
+  { path: "/profile", element: <Profile /> },
+  { path: "/reservation", element: <Reservation /> },
+  { path: "/reviews", element: <Reviews /> },
+  { path: "/tables", element: <Table /> },
 
 ]);
 
@@ -52,8 +54,10 @@ const root = document.getElementById("root") as HTMLElement;
 
 ReactDOM.createRoot(root).render(
   <div>
-    <RouterProvider router={router} />
-  <Toaster/>
+    <Provider store={store}>
+      <RouterProvider router={router} />
+      <Toaster />
+    </Provider>
   </div>
 );
 
