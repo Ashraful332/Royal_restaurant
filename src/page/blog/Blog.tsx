@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState } from "react";
 import Footer from "../../components/navigation/Footer";
 import Navbar from "../../components/navigation/Navbar";
@@ -64,18 +65,21 @@ const Blog = () => {
                                 <div className="w-[97vw] sm:w-[350px] h-auto sm:h-[300px] overflow-hidden object-center relative ">
                                     <img src={blog.photoUrl} alt="photo 1" className="hover-image-popular " />
                                 </div>
-                                <div>
-                                    <div className="mt-5 flex justify-between text-2xl">
-                                        <h4 className="text-lg text-white">
-                                            {blog.title}
-                                        </h4>
+                                <div className="h-[180px] flex flex-col justify-between ">
+                                    <div>
+                                        <div className="mt-5 flex justify-between text-2xl">
+                                            <h4 className="text-base text-white">
+                                                {blog.title}
+                                            </h4>
+                                        </div>
+                                        <p className="text-[var(--pTx-color)] text-sm pt-[6px] pr-2 pb-4  ">
+                                            {blog.SortDes}
+                                        </p>
                                     </div>
-                                    <p className="text-[var(--pTx-color)] text-sm pt-[6px] pr-2 pb-4  ">
-                                        {blog.SortDes}
-                                    </p>
+
                                     <div className="flex justify-between">
-                                        <Link to={`/blog/${blog._id}`} 
-                                        className="Order-btn ">
+                                        <Link to={`/blog/${blog._id}`}
+                                            className="Order-btn ">
                                             View Details
                                         </Link>
                                     </div>
