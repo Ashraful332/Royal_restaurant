@@ -126,6 +126,7 @@ export default function CommentBlog({ MyBlogData }: CommentBlogProps) {
 
         // reset the form data
         form.reset();
+        setComment("")
     }
 
 
@@ -155,11 +156,11 @@ export default function CommentBlog({ MyBlogData }: CommentBlogProps) {
                         </div>
                         <div className="p-6 bg-[#0c0c0c7a] rounded-2xl w-full">
                             <div className="flex justify-between items-center mb-2">
-                                <p className="text-sm font-semibold text-white">{cmt?.name}</p>
-                                <p className="text-xs text-gray-400">{cmt?.date}</p>
+                                <p className="text-sm font-semibold text-[#ffffffd8] ">{cmt?.name}</p>
+                                <p className="text-xs font-bold text-gray-400">{cmt?.date}</p>
                             </div>
                             <div>
-                                <p className="text-gray-200">{cmt?.comment}</p>
+                                <p className="text-[#ffffff98] italic ">{cmt?.comment}</p>
                             </div>
                         </div>
                     </div>

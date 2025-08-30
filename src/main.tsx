@@ -22,8 +22,6 @@ import Profile from "./admin/pages/Profile.tsx";
 import Reviews from "./admin/pages/Reviews.tsx";
 import Table from "./admin/pages/Tabile.tsx";
 import BlogDetails from "./page/blog/details/BlogDetails.tsx";
-import { store } from './app/store'
-import { Provider } from 'react-redux'
 
 
 const router = createBrowserRouter([
@@ -54,10 +52,8 @@ const root = document.getElementById("root") as HTMLElement;
 
 ReactDOM.createRoot(root).render(
   <div>
-    <Provider store={store}>
       <RouterProvider router={router} />
       <Toaster />
-    </Provider>
   </div>
 );
 
