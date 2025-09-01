@@ -22,10 +22,6 @@ import Profile from "./admin/pages/Profile.tsx";
 import Reviews from "./admin/pages/Reviews.tsx";
 import Table from "./admin/pages/Tabile.tsx";
 import BlogDetails from "./page/blog/details/BlogDetails.tsx";
-import Ipn from "./components/Checkout/Ipn.tsx";
-import Cancel from "./components/Checkout/Cancel.tsx";
-import Fail from "./components/Checkout/Fail.tsx";
-import Success from "./components/Checkout/Success.tsx";
 
 
 const router = createBrowserRouter([
@@ -49,10 +45,7 @@ const router = createBrowserRouter([
   { path: "/reservation", element: <Reservation /> },
   { path: "/reviews", element: <Reviews /> },
   { path: "/tables", element: <Table /> },
-  { path: "/ipn", element: <Ipn /> },
-  { path: "/cancel", element: <Cancel /> },
-  { path: "/fail", element: <Fail /> },
-  { path: "/success", element: <Success /> },
+
 
 ]);
 
