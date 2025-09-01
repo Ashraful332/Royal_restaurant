@@ -19,7 +19,7 @@ const Hero = () => {
                 <div className="relative">
                     <img src={BigPlat} alt="plate" className="w-[300px] md:w-[370px]  " />
                     <div className="absolute top-[70%] left-[40%] md:left-0 ">
-                        <p className="py-3 px-4 bg-primary text-lg md:text-2xl inline-flex font-medium text-white ">Price: $11</p>
+                        <p className="py-3 px-4 bg-primary text-lg md:text-2xl inline-flex font-medium text-white ">Price: $110</p>
                     </div>
                 </div>
                 <div className="absolute top-3 left-[65%] md:left-[67%]">

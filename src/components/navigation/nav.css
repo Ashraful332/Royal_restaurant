@@ -31,13 +31,10 @@
   .hidden-nav-show {
     @apply hidden lg:flex lg:items-center ;
   }
-
-
-}
-
-/* footer css */
-.footer-header{
-    font: 800;
-    font-size: 20px;
-    color: white;
+  .flex-footer-start{
+    @apply flex flex-col items-start
+  }
+  .footer-header{
+    @apply font-bold text-white/95 text-xl
+  }
 }
