@@ -15,12 +15,25 @@ const AddBlog = () => {
     e.preventDefault();
     const form = e.currentTarget;
 
+    // date and time
+    const bdTime = new Date().toLocaleString("en-US", {
+      timeZone: "Asia/Dhaka",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true  
+    });
+
     const BlogData = {
       title: (form.Title as HTMLInputElement).value,
       SortDes: (form.SortDes as HTMLInputElement).value,
       photoUrl: (form.photoUrl as HTMLInputElement).value,
       description: content,
-      View : 0
+      date: bdTime,
+      View: 0
     };
 
     console.log("Blog Data:", BlogData);

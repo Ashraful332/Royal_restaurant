@@ -5,10 +5,20 @@ import { FaUserCircle } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdOutlineDateRange } from "react-icons/md";
-
-
+import toast, { Toaster } from "react-hot-toast";
 
 const Reservation = () => {
+    // Handle form submit
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        // ✅ Show toast message
+        toast.success("Table reserved successfully! 🎉");
+
+        // ✅ Reset form
+        e.currentTarget.reset();
+    };
+
     return (
         <div className="max-w-screen overflow-x-hidden">
             <Navbar />
@@ -22,7 +32,11 @@ const Reservation = () => {
                             Book your table for lunch or dinner.
                         </p>
 
-                        <form className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {/* ✅ form submit handler */}
+                        <form
+                            onSubmit={handleSubmit}
+                            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                        >
                             {/* Name */}
                             <div className="relative">
                                 <FaUserCircle className="absolute top-3 left-3 text-white text-xl" />
@@ -30,7 +44,8 @@ const Reservation = () => {
                                     type="text"
                                     name="name"
                                     placeholder="Your Name"
-                                    className="w-full pl-10 pr-4 py-2 rounded-xl bg-white/20 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-pink-400"
+                                    required
+                                    className="w-full pl-10 pr-4 py-2 rounded-xl bg-white/20 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-amber-500"
                                 />
                             </div>
 
@@ -41,7 +56,8 @@ const Reservation = () => {
                                     type="email"
                                     name="email"
                                     placeholder="Your Email"
-                                    className="w-full pl-10 pr-4 py-2 rounded-xl bg-white/20 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-pink-400"
+                                    required
+                                    className="w-full pl-10 pr-4 py-2 rounded-xl bg-white/20 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-amber-500"
                                 />
                             </div>
 
@@ -52,7 +68,8 @@ const Reservation = () => {
                                     type="text"
                                     name="phone"
                                     placeholder="Your Phone"
-                                    className="w-full pl-10 pr-4 py-2 rounded-xl bg-white/20 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-pink-400"
+                                    required
+                                    className="w-full pl-10 pr-4 py-2 rounded-xl bg-white/20 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-amber-500"
                                 />
                             </div>
 
@@ -63,7 +80,8 @@ const Reservation = () => {
                                     type="text"
                                     name="address"
                                     placeholder="Your Address"
-                                    className="w-full pl-10 pr-4 py-2 rounded-xl bg-white/20 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-pink-400"
+                                    required
+                                    className="w-full pl-10 pr-4 py-2 rounded-xl bg-white/20 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-amber-500"
                                 />
                             </div>
 
@@ -71,14 +89,21 @@ const Reservation = () => {
                             <div className="relative">
                                 <select
                                     name="meal"
-                                    className="w-full pl-3 pr-4 py-2 rounded-xl bg-white/20 text-white outline-none focus:ring-2 focus:ring-pink-400"
+                                    required
+                                    className="w-full pl-3 pr-4 py-2 rounded-xl bg-white/20 text-white outline-none focus:ring-2 focus:ring-amber-500"
                                 >
                                     <option value="" disabled selected>
                                         Select Meal
                                     </option>
-                                    <option value="breakfast" className="text-gray-800">Breakfast</option>
-                                    <option value="lunch" className="text-gray-800">Lunch</option>
-                                    <option value="dinner" className="text-gray-800">Dinner</option>
+                                    <option value="breakfast" className="text-gray-800">
+                                        Breakfast
+                                    </option>
+                                    <option value="lunch" className="text-gray-800">
+                                        Lunch
+                                    </option>
+                                    <option value="dinner" className="text-gray-800">
+                                        Dinner
+                                    </option>
                                 </select>
                             </div>
 
@@ -88,24 +113,28 @@ const Reservation = () => {
                                 <input
                                     type="date"
                                     name="date"
-                                    className="w-full pl-10 pr-4 py-2 rounded-xl bg-white/20 text-white outline-none focus:ring-2 focus:ring-pink-400"
+                                    required
+                                    className="w-full pl-10 pr-4 py-2 rounded-xl bg-white/20 text-white outline-none focus:ring-2 focus:ring-amber-500"
                                 />
                             </div>
-                        </form>
 
-                        {/* Submit Button */}
-                        <div className="text-center mt-6">
-                            <button
-                                type="submit"
-                                className="px-6 py-2 rounded-xl bg-primary hover:bg-amber-500 text-white font-semibold shadow-lg transition-all"
-                            >
-                                Reserve Now
-                            </button>
-                        </div>
+                            {/* Submit Button */}
+                            <div className="col-span-full text-center mt-6">
+                                <button
+                                    type="submit"
+                                    className="px-6 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-semibold shadow-lg transition-all"
+                                >
+                                    Reserve Now
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <div className="max-w-[1170px] mx-auto text-primary  flex flex-col lg:flex-row w-[100%] items-center lg:items-start
-                 justify-center lg:justify-between mb-sec ">
+
+                {/* ✅ Toast Container */}
+                <Toaster position="top-center" reverseOrder={false} />
+
+                <div className="max-w-[1170px] mx-auto text-primary  flex flex-col lg:flex-row w-[100%] items-center lg:items-start justify-center lg:justify-between mb-sec ">
                     <div className="flex flex-col items-center gap-2">
                         <h3 className="text-white font-black text-2xl">London</h3>
                         <p>Silk St, Barbican, London EC2Y 8DS</p>

@@ -5,6 +5,7 @@ import { useParams } from "react-router";
 import Navbar from "../../../components/navigation/Navbar";
 import Footer from "../../../components/navigation/Footer";
 import CommentBlog from "./Comment";
+import { FaRegEye } from "react-icons/fa";
 
 
 const Public = import.meta.env.VITE_API_URL;
@@ -59,12 +60,20 @@ export default function BlogDetails() {
     return (
         <div>
             <Navbar />
-            <div className="flex flex-col items-center mt-primary" >
-                <div className="mb-sec ">
-                    <img src={blogs.photoUrl} alt="Blog image" className="w-[500px] " />
-                    <p>{blogs.title}</p>
-                    <p>{blogs.SortDes}</p>
-                    <p>{blogs.View}</p>
+            <div className="flex flex-col items-center justify-center mx-auto mt-primary" >
+                <div className="mb-sec px-2 lg:p-0  ">
+                    <div>
+                        <img src={blogs.photoUrl} alt="Blog image" className="w-[100%] h-[500px] rounded-2xl object-cover " />
+                    </div>
+                    <div className="flex flex-col sm:flex-row items-center justify-between">
+                        <h2 className="text-lg sm:text-2xl text-white font-bold mt-2">{blogs.title}</h2>
+                        <div className="flex items-center gap-3">
+                            <FaRegEye className="text-amber-500 text-2xl" />
+                            <p>{blogs.View}</p>
+                        </div>
+                    </div>
+                    <p className="mt-3 w-full sm:w-[80%] text-sm sm:text-base ">{blogs.SortDes}</p>
+
                     {/* Responsive iframe CSS */}
                     <style>
                         {`
@@ -93,8 +102,7 @@ export default function BlogDetails() {
                 />
                 {/* coment section */}
                 <div className="flex flex-col items-center mt-sec mb-sec">
-                    <CommentBlog
-                        MyBlogData={blogs} />
+                    <CommentBlog MyBlogData={blogs} />
                 </div>
             </div>
             <Footer />
