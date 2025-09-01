@@ -46,6 +46,7 @@ const router = createBrowserRouter([
   { path: "/reviews", element: <Reviews /> },
   { path: "/tables", element: <Table /> },
 
+
 ]);
 
 const root = document.getElementById("root") as HTMLElement;

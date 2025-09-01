@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+/* import fonts */
+
+.libre-header {
+  font-family: "Libre Bodoni", serif;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+}
+
+/* font family main */
+.plus-jakarta-sans-main {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+}
 
 /* global variables */
 :root {
@@ -10,17 +26,20 @@
   --margin-high: 160px;
   --white-color: #ffff;
   --pTx-color: #CCCCCC;
+  --header-font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 /* global */
 body {
   /* background-color: #111114; */
   background-color: #111114;
-  color: var(--pTx-color) ;
+  color: var(--pTx-color);
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 /* ✅ Correct Tailwind custom utility definition */
 @layer utilities {
+
   /* Flexbox */
   .flex-center {
     @apply flex flex-col items-center;
@@ -59,16 +78,21 @@ body {
   .mb-high {
     @apply mb-[var(--margin-high)];
   }
+
   .mt-high {
     @apply mt-[var(--margin-high)];
   }
+
   .mt-sec {
-    @apply mt-[var(--margin-sec)] ;
+    @apply mt-[var(--margin-sec)];
   }
+
   .text-primary {
     @apply text-[var(--pTx-color)];
   }
+
   .text-header {
     @apply text-4xl lg:text-6xl font-bold text-center text-white;
+    font-family: "Libre Bodoni", serif;
   }
 }

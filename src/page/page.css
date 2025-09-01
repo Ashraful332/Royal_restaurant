@@ -18,7 +18,7 @@
 /* reservation page */
 .Online-Reservation{
     background-image: url("https://i.ibb.co.com/1YW2M1p8/italian-cuisine-6903773-1920.jpg");
-    filter: brightness(50%);
+    /* filter: brightness(70%); */
 
     display: flex;
     flex-direction: column;

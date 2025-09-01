@@ -9,7 +9,7 @@ const Hero = () => {
         <main className="flex-hero-main max-w-[1170px] mx-auto mt-primary mb-sec ">
             <div className="w-[100%] md:w-[57%] ">
                 <p>Hi, new  friend!</p>
-                <h1 className="text-[32px]/10 lg:text-[64px]/18 mb-5 text-white ">
+                <h1 className="text-[32px]/10 lg:text-[60px]/18 mb-5 text-white libre-header ">
                     We do not cook, we create your emotions!
                 </h1>
                 <p >There's evidence that cooking, like other creative practices, can boost well-being, self-esteem, and other measures of mental health.</p>
@@ -19,7 +19,7 @@ const Hero = () => {
                 <div className="relative">
                     <img src={BigPlat} alt="plate" className="w-[300px] md:w-[370px]  " />
                     <div className="absolute top-[70%] left-[40%] md:left-0 ">
-                        <p className="py-3 px-4 bg-primary text-lg md:text-2xl inline-flex font-medium text-white ">Price: $11</p>
+                        <p className="py-3 px-4 bg-primary text-lg md:text-2xl inline-flex font-medium text-white ">Price: $110</p>
                     </div>
                 </div>
                 <div className="absolute top-3 left-[65%] md:left-[67%]">

@@ -1,4 +1,5 @@
 import './App.css'
+import About from './components/home/About'
 import BookNow from './components/home/BookNow'
 import Data from './components/home/Data'
 import Hero from './components/home/Hero'
@@ -24,6 +25,7 @@ function App() {
         
       <div className='text-primary max-w-screen overflow-x-hidden px-[14px] sm:px-[30px]  '>
         <Hero/>
+        <About/>
       </div>
 
       <div className='max-w-screen overflow-x-hidden'>

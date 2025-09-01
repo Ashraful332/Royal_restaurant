@@ -132,7 +132,7 @@ export default function CommentBlog({ MyBlogData }: CommentBlogProps) {
 
     return (
         <div>
-            <form onSubmit={handelLogCom} className="flex items-center gap-5 ">
+            <form onSubmit={handelLogCom} className="flex flex-col sm:flex-row items-center justify-center gap-5 ">
                 <input type="text" name="coment" id=""
                     className="border rounded-2xl py-1 px-2"
                     onChange={(e) => setComment(e.target.value)} />
