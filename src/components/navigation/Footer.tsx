@@ -1,3 +1,5 @@
+
+
 import { Link } from "react-router";
 import Logo from "../../assets/icon/logoRR.png"
 import Apple from "../../assets/icon/apple.svg"
@@ -29,7 +31,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mx-auto w-[100%] xl:w-[60%]  sm:gap-0 text-sm xl:text-base ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto w-full xl:w-[60%] text-sm xl:text-base sm:justify-items-center text-center">
                 <div className="flex-footer-start gap-2">
                     <h3 className="footer-header">Usefull Link</h3>
                     <Link to='/'>Home</Link>
@@ -41,8 +43,8 @@ const Footer = () => {
                 <div className="flex-footer-start gap-2">
                     <h3 className="footer-header">Contact Info</h3>
                     <Link to='/' >bangladesh</Link>
-                    <Link to='/'>info@example.com</Link>
-                    <Link to='/'>800-123-45-678</Link>
+                    <Link to='/'>info@my.com</Link>
+                    <Link to='/'>+880-10108-07070</Link>
                 </div>
                 <div className="flex-footer-start gap-2">
                     <h3 className="footer-header">Follow Us</h3>
@@ -53,7 +55,7 @@ const Footer = () => {
                 </div>
                 <div className="flex-footer-start gap-2">
                     <h3 className="footer-header">Legal</h3>
-                    <Link to='/'>Website by uihut.com</Link>
+                    <Link to='/' className="">Website by ashraful.top</Link>
                     <Link to='/'>©2022. All Rights Reserved</Link>
                 </div>
             </div>

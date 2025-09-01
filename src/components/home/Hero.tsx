@@ -9,7 +9,7 @@ const Hero = () => {
         <main className="flex-hero-main max-w-[1170px] mx-auto mt-primary mb-sec ">
             <div className="w-[100%] md:w-[57%] ">
                 <p>Hi, new  friend!</p>
-                <h1 className="text-[32px]/10 lg:text-[64px]/18 mb-5 text-white ">
+                <h1 className="text-[32px]/10 lg:text-[60px]/18 mb-5 text-white libre-header ">
                     We do not cook, we create your emotions!
                 </h1>
                 <p >There's evidence that cooking, like other creative practices, can boost well-being, self-esteem, and other measures of mental health.</p>
