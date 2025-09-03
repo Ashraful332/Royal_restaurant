@@ -1,3 +1,4 @@
+import { Link } from "react-router"
 import BigPlat from "../../assets/image/Hero/big_1.png"
 import Plate from "../../assets/image/Hero/small_first_1.png"
 import Plate1 from "../../assets/image/Hero/small_first_2.png"
@@ -9,11 +10,11 @@ const Hero = () => {
         <main className="flex-hero-main max-w-[1170px] mx-auto mt-primary mb-sec ">
             <div className="w-[100%] md:w-[57%] ">
                 <p>Hi, new  friend!</p>
-                <h1 className="text-[32px]/10 lg:text-[60px]/18 mb-5 text-white libre-header ">
+                <h1 className="text-[32px]/10 lg:text-[60px]/17 mb-1 text-white libre-header ">
                     We do not cook, we create your emotions!
                 </h1>
-                <p >There's evidence that cooking, like other creative practices, can boost well-being, self-esteem, and other measures of mental health.</p>
-                <button className="hero-btn">Our Menu</button>
+                <p className="mb-12">There's evidence that cooking, like other creative practices, can boost well-being, self-esteem, and other measures of mental health.</p>
+                <Link to='/menu' className="hero-btn ">Our Menu</Link>
             </div>
             <div className="relative w-[404px] md:w-[474px] ">
                 <div className="relative">

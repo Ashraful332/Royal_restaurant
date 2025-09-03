@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 
 
 const Offers = () => {
@@ -17,7 +18,9 @@ const Offers = () => {
                             off
                         </p>
                         <p className="mt-3 sm:mt-6 text-sm">We love food, lots of different and food, just like you.</p>
-                        <button className="mt-3 sm:mt-6 bg-primary text-white text-sm sm:text-xl py-1 px-3 sm:py-3 sm:px-7 ">Order Now</button>
+                        <button className="mt-3 sm:mt-6 bg-primary text-white text-sm sm:text-xl py-1 px-3 sm:py-3 sm:px-7 hover:cursor-pointer hover:bg-amber-400 ">
+                            <Link to='/menu'>Order Now</Link> 
+                        </button>
                     </div>
                 </div>
                 <div className="w-full lg:w-[50%] flex flex-col gap-6 ">
@@ -29,7 +32,7 @@ const Offers = () => {
                         <div className="flex flex-col justify-between" >
                             <div className="flex items-center justify-between w-auto sm:w-[60%] ">
                                 <p className=" text-sm sm:text-lg font-bold">cheese burger</p>
-                                <p className=" text-sm sm:text-lg font-bold">$32</p>
+                                <p className=" text-sm sm:text-lg font-bold">$320</p>
                             </div>
                             <p className="text-[#ffffff9d] w-auto sm:w-[60%] mt-4 text-sm sm:text-lg ">mutton, chcken and vegetable fried rolls served with lettuce wraps</p>
                         </div>
@@ -42,7 +45,7 @@ const Offers = () => {
                         <div className="flex flex-col justify-between" >
                             <div className="flex items-center justify-between w-auto sm:w-[60%] ">
                                 <p className="text-sm sm:text-lg font-bold">Spicy Club</p>
-                                <p className="text-sm sm:text-lg font-bold">$42</p>
+                                <p className="text-sm sm:text-lg font-bold">$420</p>
                             </div>
                             <p className="text-[#ffffff9d] w-auto sm:w-[60%] mt-4  text-sm sm:text-lg ">mutton, chcken and vegetable fried rolls served with lettuce wraps</p>
                         </div>
@@ -55,7 +58,7 @@ const Offers = () => {
                         <div className="flex flex-col justify-between" >
                             <div className="flex items-center justify-between w-auto sm:w-[60%] ">
                                 <p className="text-sm sm:text-lg font-bold">fruit sandwich</p>
-                                <p className="text-sm sm:text-lg font-bold">$12</p>
+                                <p className="text-sm sm:text-lg font-bold">$120</p>
                             </div>
                             <p className="text-[#ffffff9d] w-auto sm:w-[60%] mt-4 text-sm sm:text-lg ">mutton, chcken and vegetable fried rolls served with lettuce wraps</p>
                         </div>
