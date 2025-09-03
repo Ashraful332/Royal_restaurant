@@ -6,9 +6,9 @@ const Opening_Times = () => {
                 <div className="w-[100%] sm:w-1/2 h-full">
                     <div className="opening-image-div">
                         <h3 className="text-2xl font-semibold mb-2">Find Us Here</h3>
-                        <p>Avenue Marina 34568 NY</p>
-                        <p>(U.S)+0123 456</p>
-                        <p>7890hellouihut@gmail.com</p>
+                        <p>Bangladesh Narayanganj</p>
+                        <p>(B.D)+0180 000</p>
+                        <p>ashrafulpathan@yahoo.com</p>
                     </div>
                 </div>
 
